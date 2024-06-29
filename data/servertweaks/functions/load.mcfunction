@@ -1,4 +1,14 @@
+#General purpose commands
+scoreboard objectives add health health {"text": "♥","color": "red"}
+scoreboard objectives setdisplay below_name health
+scoreboard objectives setdisplay list health
+
 tellraw @a {"text": "ServerTweaks by Octopusi1708 loaded!","bold": true, "color": "#00FFFF"}
+
+#Default team
+team add Default
+team join Default @a[team=!Knights,team=!Magicians,team=!Vampires]
+team modify Default color green
 
 #Vampires
 team add Vampires {"text": "[VAMPIRE]","bold":true,"color": "#AA00AA"}
