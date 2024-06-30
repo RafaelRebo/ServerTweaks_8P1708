@@ -3,7 +3,11 @@ tellraw @a {"text": "ServerTweaks by Octopusi1708 loaded!","bold": true, "color"
 #General purpose commands
 scoreboard objectives add health health {"text": "♥","color": "red"}
 scoreboard objectives add hasInjection dummy
+scoreboard objectives add talk_to_vill minecraft.custom:minecraft.talked_to_villager
 gamerule playersSleepingPercentage 1
+
+team add nocollision
+team modify nocollision collisionRule never
 
 #Vampires
 team add Vampires {"text": "[VAMPIRE]","bold":true,"color": "#AA00AA"}
