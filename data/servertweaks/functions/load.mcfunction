@@ -2,13 +2,8 @@ tellraw @a {"text": "ServerTweaks by Octopusi1708 loaded!","bold": true, "color"
 
 #General purpose commands
 scoreboard objectives add health health {"text": "♥","color": "red"}
-scoreboard objectives setdisplay below_name health
-scoreboard objectives setdisplay list health
-
-#Default team
-team add Default
-team join Default @a[team=!Knights,team=!Magicians,team=!Vampires]
-team modify Default color green
+scoreboard objectives add hasInjection dummy
+gamerule playersSleepingPercentage 1
 
 #Vampires
 team add Vampires {"text": "[VAMPIRE]","bold":true,"color": "#AA00AA"}
@@ -24,3 +19,8 @@ team modify Magicians prefix {"text": "[MAGICIAN] ","bold":true,"color": "#00AAA
 team add Knights {"text": "[KNIGHT]","bold":true,"color": "#AA0000"}
 team modify Knights color dark_red
 team modify Knights prefix {"text": "[KNIGHT] ","bold":true,"color": "#AA0000"}
+
+#Default team
+team add Default
+execute as @a[team=!Knights,team=!Magicians,team=!Vampires] at @a run team join Default @s
+team modify Default color green
