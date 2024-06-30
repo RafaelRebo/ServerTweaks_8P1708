@@ -8,6 +8,7 @@ gamerule playersSleepingPercentage 1
 
 team add nocollision
 team modify nocollision collisionRule never
+team modify nocollision color light_purple
 
 #Vampires
 team add Vampires {"text": "[VAMPIRE]","bold":true,"color": "#AA00AA"}
