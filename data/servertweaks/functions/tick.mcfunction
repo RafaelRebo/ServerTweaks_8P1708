@@ -29,5 +29,6 @@ execute as @a run execute as @s unless entity @s[scores={hasInjection=1.., talkv
 
 # END OF VAMPIRE SANGUINARE EFFECT FIX --------------------------------------------------------------------
 
+#dsaikuhdsaidusah
 # IRON'S SPELL UNABLE (ALL BUT MAGICIANS)
 
