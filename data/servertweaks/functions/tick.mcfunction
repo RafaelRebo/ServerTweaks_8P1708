@@ -28,3 +28,6 @@ execute as @a run execute as @s unless entity @s[scores={hasInjection=1.., talkv
 execute as @a run execute as @s unless entity @s[scores={hasInjection=1.., talkvill=1..}] at @s if data entity @s ActiveEffects[{"forge:id":"vampirism:poison"}] run effect clear @s vampirism:poison
 
 # END OF VAMPIRE SANGUINARE EFFECT FIX --------------------------------------------------------------------
+
+# IRON'S SPELL UNABLE (ALL BUT MAGICIANS)
+
