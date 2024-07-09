@@ -29,6 +29,21 @@ execute as @a run execute as @s unless entity @s[scores={hasInjection=1.., talkv
 
 # END OF VAMPIRE SANGUINARE EFFECT FIX --------------------------------------------------------------------
 
-#dsaikuhdsaidusah
-# IRON'S SPELL UNABLE (ALL BUT MAGICIANS)
+#START OF CLASS-SPECIFIC ITEM PREVENTION
 
+execute as @a[scores={BannedItems=1..}] run effect give @s minecraft:weakness 2 100 true
+
+execute as @a[scores={BannedItems=0}] run tag @s add forbiddenClear
+execute as @a[scores={BannedItems=1..},tag=forbiddenClear] run function servertweaks:has_banned
+
+#Vampires
+
+execute as @a[team=!Knights,team=!Magicians,team=!Default] store result score @s BannedItems run clear @s #servertweaks:servertweaks.vampirebanned 0
+
+#Magicians
+
+execute as @a[team=!Knights,team=!Vampires,team=!Default] store result score @s BannedItems run clear @s #servertweaks:servertweaks.magicianbanned 0
+
+#Knights
+
+execute as @a[team=!Vampires,team=!Magicians,team=!Default] store result score @s BannedItems run clear @s #servertweaks:servertweaks.knightbanned 0
