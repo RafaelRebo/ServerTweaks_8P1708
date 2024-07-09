@@ -1,0 +1,1 @@
+execute as @a run tellraw @a[tag=Admin] [{"selector":"@s"},{"text":" tiene ","color":"aqua"},{"score":{"name":"@s","objective":"BannedItems"}},{"text":" item prohibido(s)","color":"aqua"}]
