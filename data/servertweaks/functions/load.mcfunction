@@ -1,5 +1,7 @@
 tellraw @a {"text": "ServerTweaks by Octopusi1708 loaded!","bold": true, "color": "#00FFFF"}
 
+execute as @a run attribute @s irons_spellbooks:max_mana base set 200
+
 #General purpose commands
 scoreboard objectives add health health {"text": "♥","color": "red"}
 scoreboard objectives add hasInjection dummy

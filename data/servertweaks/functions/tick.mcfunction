@@ -38,18 +38,14 @@ execute as @a[scores={BannedItems=1..},tag=forbiddenClear] run function servertw
 
 #Vampires
 
-execute as @a[team=!Knights,team=!Magicians,team=!Default] store result score @s BannedItems run clear @s #servertweaks:servertweaks.vampirebanned
+execute as @a[team=!Knights,team=!Magicians,team=!Default] run execute store result score @s BannedItems run clear @s #servertweaks:servertweaks.vampirebanned 0
 
 #Magicians
 
-execute as @a[team=!Knights,team=!Vampires,team=!Default] store result score @s BannedItems run clear @s #servertweaks:servertweaks.magicianbanned
+execute as @a[team=!Knights,team=!Vampires,team=!Default] run execute store result score @s BannedItems run clear @s #servertweaks:servertweaks.magicianbanned 0
 
 #Knights
 
-execute as @a[team=!Vampires,team=!Magicians,team=!Default] store result score @s BannedItems run clear @s #servertweaks:servertweaks.knightbanned
+#execute as @a[team=!Vampires,team=!Magicians,team=!Default] run execute store result score @s BannedItems run clear @s #servertweaks:servertweaks.knightbanned 0
 
 # END OF CLASS-SPECIFIC ITEM PREVENTION
-
-#MISC
-
-execute as @a run attribute @s irons_spellbooks:max_mana base set 200
