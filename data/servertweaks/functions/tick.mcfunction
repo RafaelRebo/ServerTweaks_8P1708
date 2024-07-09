@@ -47,3 +47,9 @@ execute as @a[team=!Knights,team=!Vampires,team=!Default] store result score @s 
 #Knights
 
 execute as @a[team=!Vampires,team=!Magicians,team=!Default] store result score @s BannedItems run clear @s #servertweaks:servertweaks.knightbanned 0
+
+# END OF CLASS-SPECIFIC ITEM PREVENTION
+
+#MISC
+
+execute as @a run attribute @s irons_spellbooks:max_mana base set 200
