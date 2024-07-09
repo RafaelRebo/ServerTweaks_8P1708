@@ -38,15 +38,15 @@ execute as @a[scores={BannedItems=1..},tag=forbiddenClear] run function servertw
 
 #Vampires
 
-execute as @a[team=!Knights,team=!Magicians,team=!Default] store result score @s BannedItems run clear @s #servertweaks:servertweaks.vampirebanned 0
+execute as @a[team=!Knights,team=!Magicians,team=!Default] store result score @s BannedItems run clear @s #servertweaks:servertweaks.vampirebanned
 
 #Magicians
 
-execute as @a[team=!Knights,team=!Vampires,team=!Default] store result score @s BannedItems run clear @s #servertweaks:servertweaks.magicianbanned 0
+execute as @a[team=!Knights,team=!Vampires,team=!Default] store result score @s BannedItems run clear @s #servertweaks:servertweaks.magicianbanned
 
 #Knights
 
-execute as @a[team=!Vampires,team=!Magicians,team=!Default] store result score @s BannedItems run clear @s #servertweaks:servertweaks.knightbanned 0
+execute as @a[team=!Vampires,team=!Magicians,team=!Default] store result score @s BannedItems run clear @s #servertweaks:servertweaks.knightbanned
 
 # END OF CLASS-SPECIFIC ITEM PREVENTION
 
