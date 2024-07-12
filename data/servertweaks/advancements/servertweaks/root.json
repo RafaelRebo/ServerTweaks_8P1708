@@ -3,8 +3,7 @@
     {
         "icon": 
         {
-            "item": "minecraft:player_head",
-            "nbt": "{SkullOwner:Octopusi1708}"
+            "item": "minecraft:ink_sac"
         },
         "title": 
         {
