@@ -7,12 +7,11 @@
         },
         "title": 
         {
-            "text": "Cerdos voladores",
-            "color": "#00AAAA"
+            "text": "Cerdos voladores"
         },
         "description": 
         {
-            "text": "Mata a un cerdo \"in El_Tito_Samu's Way\"",
+            "text": "Mata a un cerdo \"in El_Tito_Samu's Way\" (un poquito de levitación)",
             "color": "green"
         },
         "frame": "task",

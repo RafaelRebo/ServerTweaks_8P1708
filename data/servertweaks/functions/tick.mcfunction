@@ -46,7 +46,7 @@ execute as @a[team=!Knights,team=!Vampires,team=!Default] run execute store resu
 
 #Knights
 
-#execute as @a[team=!Vampires,team=!Magicians,team=!Default] run execute store result score @s BannedItems run clear @s #servertweaks:servertweaks.knightbanned 0
+execute as @a[team=!Vampires,team=!Magicians,team=!Default] run execute store result score @s BannedItems run clear @s #servertweaks:servertweaks.knightbanned 0
 
 # END OF CLASS-SPECIFIC ITEM PREVENTION
 
@@ -55,5 +55,8 @@ execute as @a[team=!Knights,team=!Vampires,team=!Default] run execute store resu
 #FLYING PIGS
 
 tag @e[type=minecraft:pig,nbt={ActiveEffects:[{Id:25}]}] add levit
-execute as @e[tag=levit] run execute at @s run tag @a[distance=..50] add granted 
+execute as @e[tag=levit] run execute at @s run tag @a[distance=..50] add granted
+execute as @e[tag=levit] run effect clear @s majruszsdifficulty:bleeding
+execute as @e[tag=levit] run effect clear @s mahoutsukai:bleeding 
 execute as @a[tag=granted] run execute at @s unless entity @e[tag=levit,distance=..150] run advancement grant @s only servertweaks:servertweaks/flyingpigs flying_pig
+execute as @a[tag=granted] run execute at @s unless entity @e[tag=levit,distance=..150] run tag @s remove granted
