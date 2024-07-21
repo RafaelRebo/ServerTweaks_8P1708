@@ -8,6 +8,14 @@ tag @a[team=VampiresR4] add Vampire
 tag @a[team=VampiresR5] add Vampire
 tag @a[team=VampiresR6] add Vampire
 
+execute as @a[team=VampiresR0] run scoreboard players set @s VampireRank 0
+execute as @a[team=VampiresR1] run scoreboard players set @s VampireRank 1 
+execute as @a[team=VampiresR2] run scoreboard players set @s VampireRank 2
+execute as @a[team=VampiresR3] run scoreboard players set @s VampireRank 3
+execute as @a[team=VampiresR4] run scoreboard players set @s VampireRank 4
+execute as @a[team=VampiresR5] run scoreboard players set @s VampireRank 5
+execute as @a[team=VampiresR6] run scoreboard players set @s VampireRank 6
+
 tag @a[team=MagiciansR0] add Magician
 tag @a[team=MagiciansR1] add Magician
 tag @a[team=MagiciansR2] add Magician
@@ -16,6 +24,14 @@ tag @a[team=MagiciansR4] add Magician
 tag @a[team=MagiciansR5] add Magician
 tag @a[team=MagiciansR6] add Magician
 
+execute as @a[team=MagiciansR0] run scoreboard players set @s MagicianRank 0
+execute as @a[team=MagiciansR1] run scoreboard players set @s MagicianRank 1 
+execute as @a[team=MagiciansR2] run scoreboard players set @s MagicianRank 2
+execute as @a[team=MagiciansR3] run scoreboard players set @s MagicianRank 3
+execute as @a[team=MagiciansR4] run scoreboard players set @s MagicianRank 4
+execute as @a[team=MagiciansR5] run scoreboard players set @s MagicianRank 5
+execute as @a[team=MagiciansR6] run scoreboard players set @s MagicianRank 6
+
 tag @a[team=KnightsR0] add Knight
 tag @a[team=KnightsR1] add Knight
 tag @a[team=KnightsR2] add Knight
@@ -23,6 +39,14 @@ tag @a[team=KnightsR3] add Knight
 tag @a[team=KnightsR4] add Knight
 tag @a[team=KnightsR5] add Knight
 tag @a[team=KnightsR6] add Knight
+
+execute as @a[team=KnightsR0] run scoreboard players set @s KnightsRank 0
+execute as @a[team=KnightsR1] run scoreboard players set @s KnightsRank 1 
+execute as @a[team=KnightsR2] run scoreboard players set @s KnightsRank 2
+execute as @a[team=KnightsR3] run scoreboard players set @s KnightsRank 3
+execute as @a[team=KnightsR4] run scoreboard players set @s KnightsRank 4
+execute as @a[team=KnightsR5] run scoreboard players set @s KnightsRank 5
+execute as @a[team=KnightsR6] run scoreboard players set @s KnightsRank 6
 
 # VAMPIRE SANGUINARE EFFECT FIX (DISABLE fangInfection in Vampirism config file)
 
