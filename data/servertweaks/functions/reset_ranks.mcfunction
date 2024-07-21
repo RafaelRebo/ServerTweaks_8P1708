@@ -1,3 +1,3 @@
-scoreboard players set @s KnightsRank 0
-scoreboard players set @s VampireRank 0
-scoreboard players set @s MagicianRank 0
+execute if entity @s[tag=Vampire] run team join VampiresR0 @s
+execute if entity @s[tag=Knight] run team join KnightsR0 @s
+execute if entity @s[tag=Magician] run team join MagiciansR0 @s
