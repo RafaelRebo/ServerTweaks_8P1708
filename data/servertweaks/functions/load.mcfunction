@@ -18,8 +18,11 @@ tag Octopusi1708 add Admin
 #TEAMS COMMANDS
 
 scoreboard objectives add VampireRank dummy
+scoreboard players add @a VampireRank 0
 scoreboard objectives add MagicianRank dummy
+scoreboard players add @a MagicianRank 0
 scoreboard objectives add KnightsRank dummy
+scoreboard players add @a KnightsRank 0
 
 #Vampires
 team add VampiresR0 {"text": "[VAMPIROS]","bold":true,"color": "#AA00AA"}
