@@ -1,0 +1,1 @@
+execute as @s if entity @s[tag=!Knight] run tellraw @a [{"selector":"@s"},{"text":" tiene una habilidad de guerrero","color":"aqua"}]

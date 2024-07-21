@@ -1,9 +1,35 @@
+#GROUP TEAMS
+
+tag @a[team=VampiresR0] add Vampire
+tag @a[team=VampiresR1] add Vampire
+tag @a[team=VampiresR2] add Vampire
+tag @a[team=VampiresR3] add Vampire
+tag @a[team=VampiresR4] add Vampire
+tag @a[team=VampiresR5] add Vampire
+tag @a[team=VampiresR6] add Vampire
+
+tag @a[team=MagiciansR0] add Magician
+tag @a[team=MagiciansR1] add Magician
+tag @a[team=MagiciansR2] add Magician
+tag @a[team=MagiciansR3] add Magician
+tag @a[team=MagiciansR4] add Magician
+tag @a[team=MagiciansR5] add Magician
+tag @a[team=MagiciansR6] add Magician
+
+tag @a[team=KnightsR0] add Knight
+tag @a[team=KnightsR1] add Knight
+tag @a[team=KnightsR2] add Knight
+tag @a[team=KnightsR3] add Knight
+tag @a[team=KnightsR4] add Knight
+tag @a[team=KnightsR5] add Knight
+tag @a[team=KnightsR6] add Knight
+
 # VAMPIRE SANGUINARE EFFECT FIX (DISABLE fangInfection in Vampirism config file)
 
 #Checks if a player has the injection in hand, and is able to be a vampire
-tag @a[team=!Knights,team=!Magicians] add vampirable
-tag @a[team=!Vampires,team=!Default] remove vampirable
-execute as @a[team=!Vampires,team=!Default] run effect clear @s vampirism:sanguinare
+tag @a[tag=!Knight,tag=!Magician] add vampirable
+tag @a[tag=!Vampire,team=!Default] remove vampirable
+execute as @a[tag=!Vampire,team=!Default] run effect clear @s vampirism:sanguinare
 execute as @a[nbt={SelectedItem:{id:"vampirism:injection_sanguinare"}},tag=vampirable] at @a run scoreboard players set @s hasInjection 1
 execute as @a[nbt=!{SelectedItem:{id:"vampirism:injection_sanguinare"}},tag=vampirable] at @a run scoreboard players set @s hasInjection 0
 
@@ -38,15 +64,15 @@ execute as @a[scores={BannedItems=1..},tag=forbiddenClear] run function servertw
 
 #Vampires
 
-execute as @a[team=!Knights,team=!Magicians,team=!Default] run execute store result score @s BannedItems run clear @s #servertweaks:servertweaks.vampirebanned 0
+execute as @a[tag=!Knight,tag=!Magician,team=!Default] run execute store result score @s BannedItems run clear @s #servertweaks:servertweaks.vampirebanned 0
 
 #Magicians
 
-execute as @a[team=!Knights,team=!Vampires,team=!Default] run execute store result score @s BannedItems run clear @s #servertweaks:servertweaks.magicianbanned 0
+execute as @a[tag=!Knight,tag=!Vampire,team=!Default] run execute store result score @s BannedItems run clear @s #servertweaks:servertweaks.magicianbanned 0
 
 #Knights
 
-execute as @a[team=!Vampires,team=!Magicians,team=!Default] run execute store result score @s BannedItems run clear @s #servertweaks:servertweaks.knightbanned 0
+execute as @a[tag=!Vampire,tag=!Magician,team=!Default] run execute store result score @s BannedItems run clear @s #servertweaks:servertweaks.knightbanned 0
 
 # END OF CLASS-SPECIFIC ITEM PREVENTION
 

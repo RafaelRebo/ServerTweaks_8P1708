@@ -1,1 +1,1 @@
-execute as @s if entity @s[team=!Magicians] run tellraw @a [{"selector":"@s"},{"text":" tiene una habilidad de hechicero","color":"aqua"}]
+execute as @s if entity @s[tag=!Magician] run tellraw @a [{"selector":"@s"},{"text":" tiene una habilidad de hechicero","color":"aqua"}]
