@@ -157,3 +157,8 @@ execute as @e[tag=levit] run effect clear @s majruszsdifficulty:bleeding
 execute as @e[tag=levit] run effect clear @s mahoutsukai:bleeding 
 execute as @a[tag=granted] run execute at @s unless entity @e[tag=levit,distance=..150] run advancement grant @s only servertweaks:servertweaks/flyingpigs flying_pig
 #execute as @a[tag=granted] run execute at @s unless entity @e[tag=levit,distance=..150] run tag @s remove granted
+
+#VAMPIRE RANK ADVANCEMENTS
+
+execute as @a[team=VampiresR1] run advancement grant @s only servertweaks:servertweaks/vampirer1 vampirer1
+execute as @a[team=VampiresR2] run advancement grant @s only servertweaks:servertweaks/vampirer2 vampirer2

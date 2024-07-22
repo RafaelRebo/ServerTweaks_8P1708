@@ -1,0 +1,34 @@
+{
+    "display": 
+    {
+        "icon": 
+        {
+            "item": "vampirism:vampire_blood_bottle"
+        },
+        "title": 
+        {
+            "text": "Vampiro de Rango 2"
+        },
+        "description": 
+        {
+            "text": "Por alguna razón, la luz del sol te empieza a hacer daño... ¿demasiado tiempo encerrado en casa?",
+            "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "servertweaks:servertweaks/vampirer1",
+    "criteria": 
+    {
+        "vampirer2":
+        {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": 
+    [
+        ["vampirer2"]
+    ]
+}

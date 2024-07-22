@@ -1,0 +1,34 @@
+{
+    "display": 
+    {
+        "icon": 
+        {
+            "item": "minecraft:knowledge_book"
+        },
+        "title": 
+        {
+            "text": "El comienzo del viaje"
+        },
+        "description": 
+        {
+            "text": "El punto de partida de tu personal odisea de ascenso social en el servidor",
+            "color": "green"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "servertweaks:servertweaks/root",
+    "criteria": 
+    {
+        "nothing":
+        {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "requirements": 
+    [
+        ["nothing"]
+    ]
+}
