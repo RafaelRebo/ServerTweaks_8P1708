@@ -1,12 +1,13 @@
 tellraw @a {"text": "ServerTweaks by Octopusi1708 loaded!","bold": true, "color": "#00FFFF"}
 
-execute as @a run attribute @s irons_spellbooks:max_mana base set 200
-
 #General purpose commands
 scoreboard objectives add health health {"text": "♥","color": "red"}
 scoreboard objectives add hasInjection dummy
 scoreboard objectives add talkvill minecraft.custom:minecraft.talked_to_villager
 scoreboard objectives add BannedItems dummy
+scoreboard objectives add sneakTime minecraft.custom:minecraft.sneak_time
+scoreboard objectives add cooldownTimer dummy
+scoreboard objectives add chargedTimer dummy
 gamerule playersSleepingPercentage 1
 
 team add nocollision
