@@ -10,6 +10,11 @@ scoreboard objectives add cooldownTimer dummy
 scoreboard objectives add chargedTimer dummy
 gamerule playersSleepingPercentage 1
 
+execute as @a[tag=Magician] run attribute @s irons_spellbooks:spell_resist base set 1.3
+execute as @a[tag=Knight] run attribute @s minecraft:generic.armor base set 6
+execute as @a[tag=!Magician] run attribute @s irons_spellbooks:spell_resist base set 1
+execute as @a[tag=!Knight] run attribute @s minecraft:generic.armor base set 0
+
 team add nocollision
 team modify nocollision collisionRule never
 team modify nocollision color light_purple

@@ -1,4 +1,4 @@
-#OVERCHARGED MECHANIC
+#OVERCHARGED MAGICIAN MECHANIC
 
 execute as @a unless predicate servertweaks:sneaking run scoreboard players set @s sneakTime 0
 execute as @a[tag=!Magician] run scoreboard players set @s sneakTime 0
@@ -53,6 +53,8 @@ execute as @a[tag=inCooldown] if score @s cooldownTimer matches 40 run playsound
 execute as @a[tag=inCooldown] if score @s cooldownTimer matches 80 run playsound minecraft:entity.generic.extinguish_fire master @s ~ ~ ~ 100 0.5
 execute as @a[tag=inCooldown] if score @s cooldownTimer matches 120 run playsound minecraft:entity.generic.extinguish_fire master @s ~ ~ ~ 100 0.5
 execute as @a[tag=inCooldown] if score @s cooldownTimer matches 160 run playsound minecraft:entity.generic.extinguish_fire master @s ~ ~ ~ 100 0.5
+
+#OVERCHARGED KNIGHT MECHANIC
 
 #GROUP TEAMS
 
