@@ -8,6 +8,8 @@ scoreboard objectives add BannedItems dummy
 scoreboard objectives add sneakTime minecraft.custom:minecraft.sneak_time
 scoreboard objectives add cooldownTimer dummy
 scoreboard objectives add chargedTimer dummy
+scoreboard objectives add currentMana dummy
+scoreboard objectives add maxMana dummy
 gamerule playersSleepingPercentage 1
 
 execute as @a[tag=Magician] run attribute @s irons_spellbooks:spell_resist base set 1.3
