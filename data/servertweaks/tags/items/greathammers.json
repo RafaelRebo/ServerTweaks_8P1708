@@ -1,0 +1,16 @@
+{
+    "values": [
+        "simplyswords:iron_greathammer",
+        "simplyswords:gold_greathammer",
+        "simplyswords:diamond_greathammer",
+        "simplyswords:netherite_greathammer",
+        "simplyswords:runic_greathammer",
+        "simplyswords:gobber_compat/gobber/gobber_greathammer",
+        "simplyswords:gobber_compat/gobber_nether/gobber_nether_greathammer",
+        "simplyswords:gobber_compat/gobber_end/gobber_end_greathammer",
+        "simplyswords:hearthflame",
+        "simplyswords:soulkeeper",
+        "simplyswords:frostfall",
+        "simplyswords:mjolnir"
+    ]
+}

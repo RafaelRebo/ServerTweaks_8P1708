@@ -22,6 +22,7 @@ execute as @a[tag=Magician,tag=!inCooldown] run scoreboard players set @s cooldo
 execute as @a[tag=Magician,tag=inCooldown] run tag @s remove overcharged
 execute as @a[tag=Magician,tag=inCooldown] run attribute @s irons_spellbooks:max_mana base set -100000
 execute as @a[tag=Magician,tag=inCooldown] run attribute @s irons_spellbooks:spell_power base set 1
+execute as @a[tag=Magician,tag=inCooldown] run attribute @s minecraft:generic.movement_speed base set 0.05
 execute as @a[tag=Magician,tag=inCooldown] run effect give @s weakness 1 100 true
 execute as @a[tag=Magician,tag=inCooldown] run scoreboard players add @s cooldownTimer 1
 execute as @a[tag=Magician,tag=inCooldown] at @s run particle minecraft:large_smoke ~ ~ ~ 0.1 0 0.1 0.05 3 normal @a[distance=..32]
@@ -30,6 +31,7 @@ execute as @a[tag=Magician,tag=inCooldown,scores={cooldownTimer=200..}] run tag 
 
 execute as @a[tag=Magician,tag=!inCooldown,tag=resetmana] run attribute @s irons_spellbooks:max_mana base set 100
 execute as @a[tag=Magician,tag=!inCooldown,tag=resetmana] run attribute @s irons_spellbooks:mana_regen base set 1
+execute as @a[tag=Magician,tag=!inCooldown,tag=resetmana] run attribute @s minecraft:generic.movement_speed base set 0.1
 execute as @a[tag=Magician,tag=!inCooldown,tag=resetmana] run tag @s remove resetmana
 
 execute as @a[tag=Magician,tag=overcharged] if score @s chargedTimer matches 1 run title @s actionbar {"text":"¡5 segundos de supercarga!","color":"aqua"}
