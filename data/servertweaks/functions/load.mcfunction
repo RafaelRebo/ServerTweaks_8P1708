@@ -13,9 +13,16 @@ scoreboard objectives add maxMana dummy
 gamerule playersSleepingPercentage 1
 
 execute as @a[tag=Magician] run attribute @s irons_spellbooks:spell_resist base set 1.3
+execute as @a[tag=Magician] run attribute @s irons_spellbooks:mana_regen base set 1.3
 execute as @a[tag=Knight] run attribute @s minecraft:generic.armor base set 6
+execute as @a[tag=Knight] run attribute @s skilltree:regeneration base set 0.25
+execute as @a[tag=Knight] run attribute @s irons_spellbooks:spell_resist base set 0.5
+
 execute as @a[tag=!Magician] run attribute @s irons_spellbooks:spell_resist base set 1
+execute as @a[tag=!Magician] run attribute @s irons_spellbooks:mana_regen base set 1
 execute as @a[tag=!Knight] run attribute @s minecraft:generic.armor base set 0
+execute as @a[tag=!Knight] run attribute @s skilltree:regeneration base set 0
+execute as @a[tag=!Knight] run attribute @s irons_spellbooks:spell_resist base set 1
 
 team add nocollision
 team modify nocollision collisionRule never

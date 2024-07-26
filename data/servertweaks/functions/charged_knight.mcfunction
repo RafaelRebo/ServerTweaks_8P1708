@@ -10,7 +10,7 @@ execute if score @s sneakTime matches 40 run title @s actionbar {"text":"3 segun
 execute if score @s sneakTime matches 60 run title @s actionbar {"text":"2 segundos para supercarga","color":"yellow"}
 execute if score @s sneakTime matches 80 run title @s actionbar {"text":"1 segundos para supercarga","color":"yellow"}
 
-execute if entity @s[scores={sneakTime=40..99}] at @s run particle irons_spellbooks:electricity ~ ~-1.5 ~ 0.2 0 0.2 1 10 normal @a[distance=..32]
+execute if entity @s[scores={sneakTime=40..99}] at @s run particle minecraft:crit ~ ~-1.5 ~ 0.2 0 0.2 1 10 normal @a[distance=..32]
 execute if score @s sneakTime matches 40 at @s run playsound item.firecharge.use master @a ~ ~ ~ 100 1
 execute if score @s sneakTime matches 60 at @s run playsound item.firecharge.use master @a ~ ~ ~ 100 1.3
 execute if score @s sneakTime matches 80 at @s run playsound item.firecharge.use master @a ~ ~ ~ 100 1.6

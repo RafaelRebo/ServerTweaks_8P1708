@@ -68,24 +68,29 @@ execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 160
 execute as @a[tag=Knight,tag=!inCooldown,tag=!overcharged] run function servertweaks:charged_knight
 
 execute as @a[tag=Knight,tag=!overcharged] run scoreboard players set @s chargedTimer 0
-execute as @a[tag=Knight,tag=overcharged] run attribute @s irons_spellbooks:spell_power base set 10
-execute as @a[tag=Knight,tag=overcharged] run attribute @s irons_spellbooks:mana_regen base set -100000
-execute as @a[tag=Knight,tag=overcharged] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0.2 0 0.2 0.1 3 normal @a[distance=..32]
+#execute as @a[tag=Knight,tag=overcharged] run attribute @s minecraft:generic.attack_damage base set 11
+execute as @a[tag=Knight,tag=overcharged] run attribute @s minecraft:generic.attack_damage modifier add 0-0-0-0-1 ExtraChargedDamage 1.5 multiply 
+execute as @a[tag=Knight,tag=overcharged] run attribute @s minecraft:generic.armor base set 16
+execute as @a[tag=Knight,tag=overcharged] run attribute @s minecraft:generic.movement_speed base set 0.15
+execute as @a[tag=Knight,tag=overcharged] run attribute @s minecraft:generic.attack_speed base set 4.5
+execute as @a[tag=Knight,tag=overcharged] at @s run particle minecraft:end_rod ~ ~ ~ 0.2 0 0.2 0.1 3 normal @a[distance=..32]
 execute as @a[tag=Knight,tag=overcharged] run scoreboard players add @s chargedTimer 1
 execute as @a[tag=Knight,tag=overcharged,scores={chargedTimer=400..}] run tag @s add inCooldown
 
 execute as @a[tag=Knight,tag=!inCooldown] run scoreboard players set @s cooldownTimer 0
 execute as @a[tag=Knight,tag=inCooldown] run tag @s remove overcharged
-execute as @a[tag=Knight,tag=inCooldown] run attribute @s irons_spellbooks:max_mana base set -100000
-execute as @a[tag=Knight,tag=inCooldown] run attribute @s irons_spellbooks:spell_power base set 1
+#execute as @a[tag=Knight,tag=inCooldown] run attribute @s minecraft:generic.attack_damage base set 1
+execute as @a[tag=Knight,tag=inCooldown] run attribute @s minecraft:generic.attack_damage modifier remove 0-0-0-0-1
+execute as @a[tag=Knight,tag=inCooldown] run attribute @s minecraft:generic.armor base set 1
+execute as @a[tag=Knight,tag=inCooldown] run attribute @s minecraft:generic.movement_speed base set 0.05
+execute as @a[tag=Knight,tag=inCooldown] run attribute @s minecraft:generic.attack_speed base set 4
 execute as @a[tag=Knight,tag=inCooldown] run effect give @s weakness 1 100 true
 execute as @a[tag=Knight,tag=inCooldown] run scoreboard players add @s cooldownTimer 1
 execute as @a[tag=Knight,tag=inCooldown] at @s run particle minecraft:large_smoke ~ ~ ~ 0.1 0 0.1 0.05 3 normal @a[distance=..32]
 execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 199 run tag @s add resetmana
 execute as @a[tag=Knight,tag=inCooldown,scores={cooldownTimer=600..}] run tag @s remove inCooldown
 
-execute as @a[tag=Knight,tag=!inCooldown,tag=resetmana] run attribute @s irons_spellbooks:max_mana base set 100
-execute as @a[tag=Knight,tag=!inCooldown,tag=resetmana] run attribute @s irons_spellbooks:mana_regen base set 1
+execute as @a[tag=Knight,tag=!inCooldown,tag=resetmana] run attribute @s minecraft:generic.movement_speed base set 0.1
 execute as @a[tag=Knight,tag=!inCooldown,tag=resetmana] run tag @s remove resetmana
 
 execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 1 run title @s actionbar {"text":"¡20 segundos de supercarga!","color":"aqua"}
