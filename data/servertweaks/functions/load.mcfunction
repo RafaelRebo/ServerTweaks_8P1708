@@ -10,6 +10,7 @@ scoreboard objectives add cooldownTimer dummy
 scoreboard objectives add chargedTimer dummy
 scoreboard objectives add currentMana dummy
 scoreboard objectives add maxMana dummy
+scoreboard objectives add food food
 gamerule playersSleepingPercentage 1
 
 execute as @a[tag=Magician] run attribute @s irons_spellbooks:spell_resist base set 1.3
@@ -29,6 +30,7 @@ team modify nocollision collisionRule never
 team modify nocollision color light_purple
 tag El_Tito_Samu add Admin
 tag Octopusi1708 add Admin
+tag @a add Player
 
 #TEAMS COMMANDS
 

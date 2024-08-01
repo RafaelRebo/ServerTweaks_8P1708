@@ -7,7 +7,7 @@ execute as @a[tag=Magician] if score @s currentMana < @s maxMana run tag @s remo
 
 execute as @a unless predicate servertweaks:sneaking run scoreboard players set @s sneakTime 0
 execute as @a[tag=!Magician,tag=!Knight] run scoreboard players set @s sneakTime 0
-execute as @a[tag=Magician,tag=!inCooldown,tag=!overcharged,tag=atMaxMana] run function servertweaks:charged_magic
+execute as @a[tag=Magician,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=atMaxMana] run function servertweaks:charged_magic
 
 execute as @a[tag=Magician,tag=!inCooldown,tag=!overcharged,tag=!atMaxMana] if entity @s[scores={sneakTime=50..}] run title @s actionbar {"text":"Supercarga no disponible sin maná máximo","color":"red"}
 
@@ -65,10 +65,14 @@ execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 160
 
 #OVERCHARGED KNIGHT MECHANIC
 
-execute as @a[tag=Knight,tag=!inCooldown,tag=!overcharged] run function servertweaks:charged_knight
+execute as @a[tag=Knight] if score @s food matches 20 run tag @s add atMaxHunger
+execute as @a[tag=Knight] if entity @s[scores={food=..20}] run tag @s remove atMaxHunger
+
+execute as @a[tag=Knight,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=atMaxHunger] run function servertweaks:charged_knight
+
+execute as @a[tag=Magician,tag=!inCooldown,tag=!overcharged,tag=!atMaxHunger] if entity @s[scores={sneakTime=50..}] run title @s actionbar {"text":"Supercarga no disponible sin barra de hambre completa","color":"red"}
 
 execute as @a[tag=Knight,tag=!overcharged] run scoreboard players set @s chargedTimer 0
-#execute as @a[tag=Knight,tag=overcharged] run attribute @s minecraft:generic.attack_damage base set 11
 execute as @a[tag=Knight,tag=overcharged] run attribute @s minecraft:generic.attack_damage modifier add 0-0-0-0-1 ExtraChargedDamage 1.5 multiply 
 execute as @a[tag=Knight,tag=overcharged] run attribute @s minecraft:generic.armor base set 16
 execute as @a[tag=Knight,tag=overcharged] run attribute @s minecraft:generic.movement_speed base set 0.15
@@ -79,7 +83,6 @@ execute as @a[tag=Knight,tag=overcharged,scores={chargedTimer=400..}] run tag @s
 
 execute as @a[tag=Knight,tag=!inCooldown] run scoreboard players set @s cooldownTimer 0
 execute as @a[tag=Knight,tag=inCooldown] run tag @s remove overcharged
-#execute as @a[tag=Knight,tag=inCooldown] run attribute @s minecraft:generic.attack_damage base set 1
 execute as @a[tag=Knight,tag=inCooldown] run attribute @s minecraft:generic.attack_damage modifier remove 0-0-0-0-1
 execute as @a[tag=Knight,tag=inCooldown] run attribute @s minecraft:generic.armor base set 1
 execute as @a[tag=Knight,tag=inCooldown] run attribute @s minecraft:generic.movement_speed base set 0.05
@@ -181,6 +184,12 @@ execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 440 r
 execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 480 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
 execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 520 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
 execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 560 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
+
+#VAMPIRE TERROR SIGHT
+
+execute as @a[tag=Vampire] at @s positioned ~ ~1.5 ~ run function servertweaks:terror_sight
+
+execute as @a[tag=Vampire] at @s anchored eyes positioned ^ ^ ^.5 run function servertweaks:particle_line
 
 #GROUP TEAMS
 
