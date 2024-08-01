@@ -9,7 +9,7 @@ execute as @a unless predicate servertweaks:sneaking run scoreboard players set 
 execute as @a[tag=!Magician,tag=!Knight] run scoreboard players set @s sneakTime 0
 execute as @a[tag=Magician,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=atMaxMana] run function servertweaks:charged_magic
 
-execute as @a[tag=Magician,tag=!inCooldown,tag=!overcharged,tag=!atMaxMana] if entity @s[scores={sneakTime=50..}] run title @s actionbar {"text":"Supercarga no disponible sin maná máximo","color":"red"}
+execute as @a[tag=Magician,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=!atMaxMana] if entity @s[scores={sneakTime=50..}] run title @s actionbar {"text":"Supercarga no disponible sin maná máximo","color":"red"}
 
 execute as @a[tag=Magician,tag=!overcharged] run scoreboard players set @s chargedTimer 0
 execute as @a[tag=Magician,tag=overcharged] run attribute @s irons_spellbooks:spell_power base set 5
@@ -70,7 +70,7 @@ execute as @a[tag=Knight] if entity @s[scores={food=..20}] run tag @s remove atM
 
 execute as @a[tag=Knight,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=atMaxHunger] run function servertweaks:charged_knight
 
-execute as @a[tag=Magician,tag=!inCooldown,tag=!overcharged,tag=!atMaxHunger] if entity @s[scores={sneakTime=50..}] run title @s actionbar {"text":"Supercarga no disponible sin barra de hambre completa","color":"red"}
+execute as @a[tag=Knight,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=!atMaxHunger] if entity @s[scores={sneakTime=50..}] run title @s actionbar {"text":"Supercarga no disponible sin barra de hambre completa","color":"red"}
 
 execute as @a[tag=Knight,tag=!overcharged] run scoreboard players set @s chargedTimer 0
 execute as @a[tag=Knight,tag=overcharged] run attribute @s minecraft:generic.attack_damage modifier add 0-0-0-0-1 ExtraChargedDamage 1.5 multiply 
