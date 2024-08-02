@@ -6,7 +6,7 @@ execute as @a[tag=Magician] if score @s currentMana = @s maxMana run tag @s add 
 execute as @a[tag=Magician] if score @s currentMana < @s maxMana run tag @s remove atMaxMana
 
 execute as @a unless predicate servertweaks:sneaking run scoreboard players set @s sneakTime 0
-execute as @a[tag=!Magician,tag=!Knight] run scoreboard players set @s sneakTime 0
+execute as @a[tag=!Magician,tag=!Knight,tag=!Vampire] run scoreboard players set @s sneakTime 0
 execute as @a[tag=Magician,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=atMaxMana] run function servertweaks:charged_magic
 
 execute as @a[tag=Magician,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=!atMaxMana] if entity @s[scores={sneakTime=50..}] run title @s actionbar {"text":"Supercarga no disponible sin maná máximo","color":"red"}
@@ -190,6 +190,8 @@ execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 560 r
 execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged] run function servertweaks:charged_vampire
 
 execute as @a[tag=Vampire,tag=!overcharged] run scoreboard players set @s chargedTimer 0
+execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=overcharged] at @s positioned ~ ~1.5 ~ run function servertweaks:terror_sight
+execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=overcharged] at @s anchored eyes positioned ^ ^ ^.5 run function servertweaks:particle_line
 execute as @a[tag=Vampire,tag=overcharged] at @s run particle minecraft:dust 0.67 0 0 1 ~ ~ ~ 0.2 0 0.2 0.1 3 normal @a[distance=..32]
 execute as @a[tag=Vampire,tag=overcharged] run scoreboard players add @s chargedTimer 1
 execute as @a[tag=Vampire,tag=overcharged,scores={chargedTimer=300..}] run tag @s add inCooldown
@@ -205,10 +207,6 @@ execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 2 ru
 execute as @a[tag=Vampire,tag=inCooldown,scores={cooldownTimer=400..}] run tag @s remove inCooldown
 
 execute as @a[tag=Knight,tag=!inCooldown,tag=resetmana] run tag @s remove resetmana
-
-execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged] at @s positioned ~ ~1.5 ~ run function servertweaks:terror_sight
-
-execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged] at @s anchored eyes positioned ^ ^ ^.5 run function servertweaks:particle_line
 
 execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 1 run title @s actionbar {"text":"¡15 segundos de supercarga!","color":"aqua"}
 execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 20 run title @s actionbar {"text":"¡14 segundos de supercarga!","color":"aqua"} 
