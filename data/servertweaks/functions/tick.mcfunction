@@ -66,7 +66,7 @@ execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 160
 #OVERCHARGED KNIGHT MECHANIC
 
 execute as @a[tag=Knight] if score @s food matches 20 run tag @s add atMaxHunger
-execute as @a[tag=Knight] if entity @s[scores={food=..20}] run tag @s remove atMaxHunger
+execute as @a[tag=Knight] if entity @s[scores={food=..19}] run tag @s remove atMaxHunger
 
 execute as @a[tag=Knight,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=atMaxHunger] run function servertweaks:charged_knight
 
@@ -187,9 +187,92 @@ execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 560 r
 
 #VAMPIRE TERROR SIGHT
 
-execute as @a[tag=Vampire] at @s positioned ~ ~1.5 ~ run function servertweaks:terror_sight
+execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged] run function servertweaks:charged_vampire
 
-execute as @a[tag=Vampire] at @s anchored eyes positioned ^ ^ ^.5 run function servertweaks:particle_line
+execute as @a[tag=Vampire,tag=!overcharged] run scoreboard players set @s chargedTimer 0
+execute as @a[tag=Vampire,tag=overcharged] at @s run particle minecraft:dust 0.67 0 0 1 ~ ~ ~ 0.2 0 0.2 0.1 3 normal @a[distance=..32]
+execute as @a[tag=Vampire,tag=overcharged] run scoreboard players add @s chargedTimer 1
+execute as @a[tag=Vampire,tag=overcharged,scores={chargedTimer=300..}] run tag @s add inCooldown
+
+execute as @a[tag=Vampire,tag=!inCooldown] run scoreboard players set @s cooldownTimer 0
+execute as @a[tag=Vampire,tag=inCooldown] run tag @s remove overcharged
+execute as @a[tag=Vampire,tag=inCooldown] run scoreboard players add @s cooldownTimer 1
+execute as @a[tag=Vampire,tag=inCooldown] at @s run particle minecraft:large_smoke ~ ~ ~ 0.1 0 0.1 0.05 3 normal @a[distance=..32]
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 2 run effect give @s slowness 20 2 true
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 2 run effect give @s weakness 20 100 true
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 2 run effect give @s hunger 20 20 true
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 2 run tag @s add resetmana
+execute as @a[tag=Vampire,tag=inCooldown,scores={cooldownTimer=400..}] run tag @s remove inCooldown
+
+execute as @a[tag=Knight,tag=!inCooldown,tag=resetmana] run tag @s remove resetmana
+
+execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged] at @s positioned ~ ~1.5 ~ run function servertweaks:terror_sight
+
+execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged] at @s anchored eyes positioned ^ ^ ^.5 run function servertweaks:particle_line
+
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 1 run title @s actionbar {"text":"¡15 segundos de supercarga!","color":"aqua"}
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 20 run title @s actionbar {"text":"¡14 segundos de supercarga!","color":"aqua"} 
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 40 run title @s actionbar {"text":"¡13 segundos de supercarga!","color":"aqua"}
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 60 run title @s actionbar {"text":"¡12 segundos de supercarga!","color":"aqua"}
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 80 run title @s actionbar {"text":"¡11 segundos de supercarga!","color":"aqua"}
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 100 run title @s actionbar {"text":"¡10 segundos de supercarga!","color":"aqua"}
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 120 run title @s actionbar {"text":"¡9 segundos de supercarga!","color":"aqua"} 
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 140 run title @s actionbar {"text":"¡8 segundos de supercarga!","color":"aqua"}
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 160 run title @s actionbar {"text":"¡7 segundos de supercarga!","color":"aqua"}
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 180 run title @s actionbar {"text":"¡6 segundos de supercarga!","color":"aqua"}
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 200 run title @s actionbar {"text":"¡5 segundos de supercarga!","color":"aqua"}
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 220 run title @s actionbar {"text":"¡4 segundos de supercarga!","color":"aqua"} 
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 240 run title @s actionbar {"text":"¡3 segundos de supercarga!","color":"aqua"}
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 260 run title @s actionbar {"text":"¡2 segundos de supercarga!","color":"aqua"}
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 280 run title @s actionbar {"text":"¡1 segundos de supercarga!","color":"aqua"}
+
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 1 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 20 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 40 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 60 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 80 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 100 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 120 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 140 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 160 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 180 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 200 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 220 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 240 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 260 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 280 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
+
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 1 run title @s actionbar {"text":"¡20 segundos de enfriamiento!","color":"red"}
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 20 run title @s actionbar {"text":"¡19 segundos de enfriamiento!","color":"red"} 
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 40 run title @s actionbar {"text":"¡18 segundos de enfriamiento!","color":"red"}
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 60 run title @s actionbar {"text":"¡17 segundos de enfriamiento!","color":"red"}
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 80 run title @s actionbar {"text":"¡16 segundos de enfriamiento!","color":"red"}
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 100 run title @s actionbar {"text":"¡15 segundos de enfriamiento!","color":"red"}
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 120 run title @s actionbar {"text":"¡14 segundos de enfriamiento!","color":"red"} 
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 140 run title @s actionbar {"text":"¡13 segundos de enfriamiento!","color":"red"}
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 160 run title @s actionbar {"text":"¡12 segundos de enfriamiento!","color":"red"}
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 180 run title @s actionbar {"text":"¡11 segundos de enfriamiento!","color":"red"}
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 200 run title @s actionbar {"text":"¡10 segundos de enfriamiento!","color":"red"}
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 220 run title @s actionbar {"text":"¡9 segundos de enfriamiento!","color":"red"} 
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 240 run title @s actionbar {"text":"¡8 segundos de enfriamiento!","color":"red"}
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 260 run title @s actionbar {"text":"¡7 segundos de enfriamiento!","color":"red"}
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 280 run title @s actionbar {"text":"¡6 segundos de enfriamiento!","color":"red"}
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 300 run title @s actionbar {"text":"¡5 segundos de enfriamiento!","color":"red"}
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 320 run title @s actionbar {"text":"¡4 segundos de enfriamiento!","color":"red"} 
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 340 run title @s actionbar {"text":"¡3 segundos de enfriamiento!","color":"red"}
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 360 run title @s actionbar {"text":"¡2 segundos de enfriamiento!","color":"red"}
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 380 run title @s actionbar {"text":"¡1 segundos de enfriamiento!","color":"red"}
+
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 1 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 40 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 80 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 120 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 160 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 200 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 240 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 280 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 320 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 360 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
 
 #GROUP TEAMS
 
