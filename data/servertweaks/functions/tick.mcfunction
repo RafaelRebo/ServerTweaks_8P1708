@@ -1,3 +1,43 @@
+#UPGRADED BOOK CRAFTING
+
+execute as @e[type=item,nbt={Item:{id:"irons_spellbooks:netherite_spell_book",Count:1b}}] at @s as @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b,tag:{HideFlags:1}}},limit=1,sort=nearest,distance=0..1] at @s if block ~ ~-1 ~ irons_spellbooks:pedestal run data modify block ~ ~-1 ~ heldItem set value {id:"irons_spellbooks:netherite_spell_book",Count:1b,tag:{ISB_Spells:{maxSpells:15,mustEquip:1b,spellWheel:1b}}}
+execute as @e[type=item,nbt={Item:{id:"irons_spellbooks:netherite_spell_book",Count:1b}}] at @s as @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b,tag:{HideFlags:1}}},limit=1,sort=nearest,distance=0..1] at @s if block ~ ~-1 ~ irons_spellbooks:pedestal run tag @s add fresh_craft
+
+execute as @e[type=item,nbt={Item:{id:"irons_spellbooks:necronomicon_spell_book",Count:1b}}] at @s as @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b,tag:{HideFlags:1}}},limit=1,sort=nearest,distance=0..1] at @s if block ~ ~-1 ~ irons_spellbooks:pedestal run data modify block ~ ~-1 ~ heldItem set value {id:"irons_spellbooks:necronomicon_spell_book",Count:1b,tag:{ISB_Spells:{maxSpells:15,mustEquip:1b,spellWheel:1b}}}
+execute as @e[type=item,nbt={Item:{id:"irons_spellbooks:necronomicon_spell_book",Count:1b}}] at @s as @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b,tag:{HideFlags:1}}},limit=1,sort=nearest,distance=0..1] at @s if block ~ ~-1 ~ irons_spellbooks:pedestal run tag @s add fresh_craft
+
+execute as @e[type=item,nbt={Item:{id:"irons_spellbooks:evoker_spell_book",Count:1b}}] at @s as @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b,tag:{HideFlags:1}}},limit=1,sort=nearest,distance=0..1] at @s if block ~ ~-1 ~ irons_spellbooks:pedestal run data modify block ~ ~-1 ~ heldItem set value {id:"irons_spellbooks:evoker_spell_book",Count:1b,tag:{ISB_Spells:{maxSpells:15,mustEquip:1b,spellWheel:1b}}}
+execute as @e[type=item,nbt={Item:{id:"irons_spellbooks:evoker_spell_book",Count:1b}}] at @s as @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b,tag:{HideFlags:1}}},limit=1,sort=nearest,distance=0..1] at @s if block ~ ~-1 ~ irons_spellbooks:pedestal run tag @s add fresh_craft
+
+execute as @e[type=item,nbt={Item:{id:"irons_spellbooks:villager_spell_book",Count:1b}}] at @s as @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b,tag:{HideFlags:1}}},limit=1,sort=nearest,distance=0..1] at @s if block ~ ~-1 ~ irons_spellbooks:pedestal run data modify block ~ ~-1 ~ heldItem set value {id:"irons_spellbooks:villager_spell_book",Count:1b,tag:{ISB_Spells:{maxSpells:15,mustEquip:1b,spellWheel:1b}}}
+execute as @e[type=item,nbt={Item:{id:"irons_spellbooks:villager_spell_book",Count:1b}}] at @s as @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b,tag:{HideFlags:1}}},limit=1,sort=nearest,distance=0..1] at @s if block ~ ~-1 ~ irons_spellbooks:pedestal run tag @s add fresh_craft
+
+execute as @e[type=item,nbt={Item:{id:"irons_spellbooks:druidic_spell_book",Count:1b}}] at @s as @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b,tag:{HideFlags:1}}},limit=1,sort=nearest,distance=0..1] at @s if block ~ ~-1 ~ irons_spellbooks:pedestal run data modify block ~ ~-1 ~ heldItem set value {id:"irons_spellbooks:druidic_spell_book",Count:1b,tag:{ISB_Spells:{maxSpells:15,mustEquip:1b,spellWheel:1b}}}
+execute as @e[type=item,nbt={Item:{id:"irons_spellbooks:druidic_spell_book",Count:1b}}] at @s as @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b,tag:{HideFlags:1}}},limit=1,sort=nearest,distance=0..1] at @s if block ~ ~-1 ~ irons_spellbooks:pedestal run tag @s add fresh_craft
+
+execute as @e[type=item,nbt={Item:{id:"irons_spellbooks:dragonskin_spell_book",Count:1b}}] at @s as @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b,tag:{HideFlags:1}}},limit=1,sort=nearest,distance=0..1] at @s if block ~ ~-1 ~ irons_spellbooks:pedestal run data modify block ~ ~-1 ~ heldItem set value {id:"irons_spellbooks:dragonskin_spell_book",Count:1b,tag:{ISB_Spells:{maxSpells:15,mustEquip:1b,spellWheel:1b}}}
+execute as @e[type=item,nbt={Item:{id:"irons_spellbooks:dragonskin_spell_book",Count:1b}}] at @s as @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b,tag:{HideFlags:1}}},limit=1,sort=nearest,distance=0..1] at @s if block ~ ~-1 ~ irons_spellbooks:pedestal run tag @s add fresh_craft
+
+execute as @e[type=item,nbt={Item:{id:"irons_spellbooks:blaze_spell_book",Count:1b}}] at @s as @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b,tag:{HideFlags:1}}},limit=1,sort=nearest,distance=0..1] at @s if block ~ ~-1 ~ irons_spellbooks:pedestal run data modify block ~ ~-1 ~ heldItem set value {id:"irons_spellbooks:blaze_spell_book",Count:1b,tag:{ISB_Spells:{maxSpells:15,mustEquip:1b,spellWheel:1b}}}
+execute as @e[type=item,nbt={Item:{id:"irons_spellbooks:blaze_spell_book",Count:1b}}] at @s as @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b,tag:{HideFlags:1}}},limit=1,sort=nearest,distance=0..1] at @s if block ~ ~-1 ~ irons_spellbooks:pedestal run tag @s add fresh_craft
+
+execute as @e[type=item,nbt={Item:{id:"irons_spellbooks:diamond_spell_book",Count:1b}}] at @s as @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b,tag:{HideFlags:1}}},limit=1,sort=nearest,distance=0..1] at @s if block ~ ~-1 ~ irons_spellbooks:pedestal run data modify block ~ ~-1 ~ heldItem set value {id:"irons_spellbooks:diamond_spell_book",Count:1b,tag:{ISB_Spells:{maxSpells:15,mustEquip:1b,spellWheel:1b}}}
+execute as @e[type=item,nbt={Item:{id:"irons_spellbooks:diamond_spell_book",Count:1b}}] at @s as @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b,tag:{HideFlags:1}}},limit=1,sort=nearest,distance=0..1] at @s if block ~ ~-1 ~ irons_spellbooks:pedestal run tag @s add fresh_craft
+
+execute as @e[tag=fresh_craft] at @s run playsound minecraft:entity.lightning_bolt.impact master @a ~ ~ ~ 100 1.3
+execute as @e[tag=fresh_craft] at @s run playsound minecraft:block.enchantment_table.use master @a ~ ~ ~ 100 0.8
+execute as @e[tag=fresh_craft] at @s run particle minecraft:enchant ~ ~1.4 ~ 0.2 0 0.2 2 500 normal @a[distance=..32]
+execute as @e[tag=fresh_craft] at @s run kill @e[type=item,nbt={Item:{id:"irons_spellbooks:netherite_spell_book",Count:1b}},sort=nearest,limit=1]
+execute as @e[tag=fresh_craft] at @s run kill @e[type=item,nbt={Item:{id:"irons_spellbooks:necronomicon_spell_book",Count:1b}},sort=nearest,limit=1]
+execute as @e[tag=fresh_craft] at @s run kill @e[type=item,nbt={Item:{id:"irons_spellbooks:evoker_spell_book",Count:1b}},sort=nearest,limit=1]
+execute as @e[tag=fresh_craft] at @s run kill @e[type=item,nbt={Item:{id:"irons_spellbooks:villager_spell_book",Count:1b}},sort=nearest,limit=1]
+execute as @e[tag=fresh_craft] at @s run kill @e[type=item,nbt={Item:{id:"irons_spellbooks:druidic_spell_book",Count:1b}},sort=nearest,limit=1]
+execute as @e[tag=fresh_craft] at @s run kill @e[type=item,nbt={Item:{id:"irons_spellbooks:dragonskin_spell_book",Count:1b}},sort=nearest,limit=1]
+execute as @e[tag=fresh_craft] at @s run kill @e[type=item,nbt={Item:{id:"irons_spellbooks:blaze_spell_book",Count:1b}},sort=nearest,limit=1]
+execute as @e[tag=fresh_craft] at @s run kill @e[type=item,nbt={Item:{id:"irons_spellbooks:diamond_spell_book",Count:1b}},sort=nearest,limit=1]
+execute as @e[tag=fresh_craft] at @s run kill @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b}},sort=nearest,limit=1]
+execute as @e[tag=fresh_craft] run tag @s remove fresh_craft
+
 #OVERCHARGED MAGICIAN MECHANIC
 
 execute as @a[tag=Magician] store result score @s maxMana run attribute @s irons_spellbooks:max_mana get
@@ -34,34 +74,7 @@ execute as @a[tag=Magician,tag=!inCooldown,tag=resetmana] run attribute @s irons
 execute as @a[tag=Magician,tag=!inCooldown,tag=resetmana] run attribute @s minecraft:generic.movement_speed base set 0.1
 execute as @a[tag=Magician,tag=!inCooldown,tag=resetmana] run tag @s remove resetmana
 
-execute as @a[tag=Magician,tag=overcharged] if score @s chargedTimer matches 1 run title @s actionbar {"text":"¡5 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Magician,tag=overcharged] if score @s chargedTimer matches 20 run title @s actionbar {"text":"¡4 segundos de supercarga!","color":"aqua"} 
-execute as @a[tag=Magician,tag=overcharged] if score @s chargedTimer matches 40 run title @s actionbar {"text":"¡3 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Magician,tag=overcharged] if score @s chargedTimer matches 60 run title @s actionbar {"text":"¡2 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Magician,tag=overcharged] if score @s chargedTimer matches 80 run title @s actionbar {"text":"¡1 segundos de supercarga!","color":"aqua"}
-
-execute as @a[tag=Magician,tag=overcharged] if score @s chargedTimer matches 1 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Magician,tag=overcharged] if score @s chargedTimer matches 20 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Magician,tag=overcharged] if score @s chargedTimer matches 40 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Magician,tag=overcharged] if score @s chargedTimer matches 60 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Magician,tag=overcharged] if score @s chargedTimer matches 80 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-
-execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 1 run title @s actionbar {"text":"¡10 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 20 run title @s actionbar {"text":"¡9 segundos de enfriamiento!","color":"red"} 
-execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 40 run title @s actionbar {"text":"¡8 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 60 run title @s actionbar {"text":"¡7 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 80 run title @s actionbar {"text":"¡6 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 100 run title @s actionbar {"text":"¡5 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 120 run title @s actionbar {"text":"¡4 segundos de enfriamiento!","color":"red"} 
-execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 140 run title @s actionbar {"text":"¡3 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 160 run title @s actionbar {"text":"¡2 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 180 run title @s actionbar {"text":"¡1 segundos de enfriamiento!","color":"red"}
-
-execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 1 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 40 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 80 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 120 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 160 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Magician] run function servertweaks:magician_sounds
 
 #OVERCHARGED KNIGHT MECHANIC
 
@@ -96,94 +109,7 @@ execute as @a[tag=Knight,tag=inCooldown,scores={cooldownTimer=600..}] run tag @s
 execute as @a[tag=Knight,tag=!inCooldown,tag=resetmana] run attribute @s minecraft:generic.movement_speed base set 0.1
 execute as @a[tag=Knight,tag=!inCooldown,tag=resetmana] run tag @s remove resetmana
 
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 1 run title @s actionbar {"text":"¡20 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 20 run title @s actionbar {"text":"¡19 segundos de supercarga!","color":"aqua"} 
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 40 run title @s actionbar {"text":"¡18 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 60 run title @s actionbar {"text":"¡17 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 80 run title @s actionbar {"text":"¡16 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 100 run title @s actionbar {"text":"¡15 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 120 run title @s actionbar {"text":"¡14 segundos de supercarga!","color":"aqua"} 
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 140 run title @s actionbar {"text":"¡13 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 160 run title @s actionbar {"text":"¡12 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 180 run title @s actionbar {"text":"¡11 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 200 run title @s actionbar {"text":"¡10 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 220 run title @s actionbar {"text":"¡9 segundos de supercarga!","color":"aqua"} 
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 240 run title @s actionbar {"text":"¡8 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 260 run title @s actionbar {"text":"¡7 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 280 run title @s actionbar {"text":"¡6 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 300 run title @s actionbar {"text":"¡5 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 320 run title @s actionbar {"text":"¡4 segundos de supercarga!","color":"aqua"} 
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 340 run title @s actionbar {"text":"¡3 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 360 run title @s actionbar {"text":"¡2 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 380 run title @s actionbar {"text":"¡1 segundos de supercarga!","color":"aqua"}
-
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 1 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 20 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 40 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 60 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 80 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 100 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 120 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 140 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 160 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 180 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 200 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 220 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 240 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 260 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 280 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 300 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 320 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 340 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 360 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=overcharged] if score @s chargedTimer matches 380 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 1 run title @s actionbar {"text":"¡30 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 20 run title @s actionbar {"text":"¡29 segundos de enfriamiento!","color":"red"} 
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 40 run title @s actionbar {"text":"¡28 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 60 run title @s actionbar {"text":"¡27 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 80 run title @s actionbar {"text":"¡26 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 100 run title @s actionbar {"text":"¡25 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 120 run title @s actionbar {"text":"¡24 segundos de enfriamiento!","color":"red"} 
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 140 run title @s actionbar {"text":"¡23 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 160 run title @s actionbar {"text":"¡22 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 180 run title @s actionbar {"text":"¡21 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 200 run title @s actionbar {"text":"¡20 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 220 run title @s actionbar {"text":"¡19 segundos de enfriamiento!","color":"red"} 
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 240 run title @s actionbar {"text":"¡18 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 260 run title @s actionbar {"text":"¡17 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 280 run title @s actionbar {"text":"¡16 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 300 run title @s actionbar {"text":"¡15 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 320 run title @s actionbar {"text":"¡14 segundos de enfriamiento!","color":"red"} 
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 340 run title @s actionbar {"text":"¡13 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 360 run title @s actionbar {"text":"¡12 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 380 run title @s actionbar {"text":"¡11 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 400 run title @s actionbar {"text":"¡10 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 420 run title @s actionbar {"text":"¡9 segundos de enfriamiento!","color":"red"} 
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 440 run title @s actionbar {"text":"¡8 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 460 run title @s actionbar {"text":"¡7 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 480 run title @s actionbar {"text":"¡6 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 500 run title @s actionbar {"text":"¡5 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 520 run title @s actionbar {"text":"¡4 segundos de enfriamiento!","color":"red"} 
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 540 run title @s actionbar {"text":"¡3 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 560 run title @s actionbar {"text":"¡2 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 580 run title @s actionbar {"text":"¡1 segundos de enfriamiento!","color":"red"}
-
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 1 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 40 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 80 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 120 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 160 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 200 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 240 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 280 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 320 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 360 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 400 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 440 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 480 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 520 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Knight,tag=inCooldown] if score @s cooldownTimer matches 560 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Knight] run function servertweaks:knight_sounds
 
 #VAMPIRE TERROR SIGHT
 
@@ -192,7 +118,7 @@ execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharge
 execute as @a[tag=Vampire,tag=!overcharged] run scoreboard players set @s chargedTimer 0
 execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=overcharged] at @s positioned ~ ~1.5 ~ run function servertweaks:terror_sight
 execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=overcharged] at @s anchored eyes positioned ^ ^ ^.5 run function servertweaks:particle_line
-execute as @a[tag=Vampire,tag=overcharged] at @s run particle minecraft:dust 0.67 0 0 1 ~ ~ ~ 0.2 0 0.2 0.1 3 normal @a[distance=..32]
+execute as @a[tag=Vampire,tag=overcharged] at @s run particle minecraft:dust 0.67 0 0 1 ~ ~ ~ 0.3 0 0.3 0.1 10 normal @a[distance=..32]
 execute as @a[tag=Vampire,tag=overcharged] run scoreboard players add @s chargedTimer 1
 execute as @a[tag=Vampire,tag=overcharged,scores={chargedTimer=300..}] run tag @s add inCooldown
 
@@ -208,69 +134,7 @@ execute as @a[tag=Vampire,tag=inCooldown,scores={cooldownTimer=400..}] run tag @
 
 execute as @a[tag=Knight,tag=!inCooldown,tag=resetmana] run tag @s remove resetmana
 
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 1 run title @s actionbar {"text":"¡15 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 20 run title @s actionbar {"text":"¡14 segundos de supercarga!","color":"aqua"} 
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 40 run title @s actionbar {"text":"¡13 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 60 run title @s actionbar {"text":"¡12 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 80 run title @s actionbar {"text":"¡11 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 100 run title @s actionbar {"text":"¡10 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 120 run title @s actionbar {"text":"¡9 segundos de supercarga!","color":"aqua"} 
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 140 run title @s actionbar {"text":"¡8 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 160 run title @s actionbar {"text":"¡7 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 180 run title @s actionbar {"text":"¡6 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 200 run title @s actionbar {"text":"¡5 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 220 run title @s actionbar {"text":"¡4 segundos de supercarga!","color":"aqua"} 
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 240 run title @s actionbar {"text":"¡3 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 260 run title @s actionbar {"text":"¡2 segundos de supercarga!","color":"aqua"}
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 280 run title @s actionbar {"text":"¡1 segundos de supercarga!","color":"aqua"}
-
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 1 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 20 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 40 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 60 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 80 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 100 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 120 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 140 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 160 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 180 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 200 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 220 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 240 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 260 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=overcharged] if score @s chargedTimer matches 280 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 1 run title @s actionbar {"text":"¡20 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 20 run title @s actionbar {"text":"¡19 segundos de enfriamiento!","color":"red"} 
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 40 run title @s actionbar {"text":"¡18 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 60 run title @s actionbar {"text":"¡17 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 80 run title @s actionbar {"text":"¡16 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 100 run title @s actionbar {"text":"¡15 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 120 run title @s actionbar {"text":"¡14 segundos de enfriamiento!","color":"red"} 
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 140 run title @s actionbar {"text":"¡13 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 160 run title @s actionbar {"text":"¡12 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 180 run title @s actionbar {"text":"¡11 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 200 run title @s actionbar {"text":"¡10 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 220 run title @s actionbar {"text":"¡9 segundos de enfriamiento!","color":"red"} 
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 240 run title @s actionbar {"text":"¡8 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 260 run title @s actionbar {"text":"¡7 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 280 run title @s actionbar {"text":"¡6 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 300 run title @s actionbar {"text":"¡5 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 320 run title @s actionbar {"text":"¡4 segundos de enfriamiento!","color":"red"} 
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 340 run title @s actionbar {"text":"¡3 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 360 run title @s actionbar {"text":"¡2 segundos de enfriamiento!","color":"red"}
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 380 run title @s actionbar {"text":"¡1 segundos de enfriamiento!","color":"red"}
-
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 1 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 40 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 80 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 120 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 160 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 200 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 240 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 280 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 320 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 360 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
+execute as @a[tag=Vampire] run function servertweaks:vampire_sounds
 
 #GROUP TEAMS
 
