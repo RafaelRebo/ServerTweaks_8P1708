@@ -38,6 +38,33 @@ execute as @e[tag=fresh_craft] at @s run kill @e[type=item,nbt={Item:{id:"irons_
 execute as @e[tag=fresh_craft] at @s run kill @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b}},sort=nearest,limit=1]
 execute as @e[tag=fresh_craft] run tag @s remove fresh_craft
 
+#FIRE PROJECTILES MECHANIC
+
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~-1 ~ air run setblock ~ ~ ~ minecraft:fire
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~1 ~ ~ air run setblock ~ ~ ~ minecraft:fire
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~-1 ~ ~ air run setblock ~ ~ ~ minecraft:fire
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~ ~1 air run setblock ~ ~ ~ minecraft:fire
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~ ~-1 air run setblock ~ ~ ~ minecraft:fire
+
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~-1 ~ cave_air run setblock ~ ~ ~ minecraft:fire
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~1 ~ ~ cave_air run setblock ~ ~ ~ minecraft:fire
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~-1 ~ ~ cave_air run setblock ~ ~ ~ minecraft:fire
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~ ~1 cave_air run setblock ~ ~ ~ minecraft:fire
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~ ~-1 cave_air run setblock ~ ~ ~ minecraft:fire
+
+execute as @e[type=irons_spellbooks:fireball] at @s unless block ~ ~-1 ~ air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace air
+execute as @e[type=irons_spellbooks:fireball] at @s unless block ~1 ~ ~ air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace air
+execute as @e[type=irons_spellbooks:fireball] at @s unless block ~-1 ~ ~ air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace air
+execute as @e[type=irons_spellbooks:fireball] at @s unless block ~ ~ ~1 air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace air
+execute as @e[type=irons_spellbooks:fireball] at @s unless block ~ ~ ~-1 air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace air
+
+execute as @e[type=irons_spellbooks:fireball] at @s unless block ~ ~-1 ~ cave_air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace cave_air
+execute as @e[type=irons_spellbooks:fireball] at @s unless block ~1 ~ ~ cave_air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace cave_air
+execute as @e[type=irons_spellbooks:fireball] at @s unless block ~-1 ~ ~ cave_air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace cave_air
+execute as @e[type=irons_spellbooks:fireball] at @s unless block ~ ~ ~1 cave_air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace cave_air
+execute as @e[type=irons_spellbooks:fireball] at @s unless block ~ ~ ~-1 cave_air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace cave_air
+
+
 #OVERCHARGED MAGICIAN MECHANIC
 
 execute as @a[tag=Magician] store result score @s maxMana run attribute @s irons_spellbooks:max_mana get
@@ -227,6 +254,16 @@ execute as @a[team=KnightsR3] run scoreboard players set @s KnightsRank 3
 execute as @a[team=KnightsR4] run scoreboard players set @s KnightsRank 4
 execute as @a[team=KnightsR5] run scoreboard players set @s KnightsRank 5
 execute as @a[team=KnightsR6] run scoreboard players set @s KnightsRank 6
+
+#TEAM JOIN COMMANDS
+
+execute as @a[tag=Arcanista,scores={PuntoH=1}] run team join MagiciansR3 @s
+execute as @a[tag=Arcanista,scores={PuntoH=2}] run team join MagiciansR4 @s
+execute as @a[team=MagiciansR4] run tag @s add archmage
+execute as @a[tag=archmage] run attribute @s irons_spellbooks:max_mana modifier add 0-0-0-0-2 MaxArchmageMana 50 add
+execute as @a[tag=archmage] run attribute @s irons_spellbooks:cooldown_reduction base set 1.4
+execute as @a[tag=archmage] run tag @s remove archmage
+
 
 # VAMPIRE SANGUINARE EFFECT FIX (DISABLE fangInfection in Vampirism config file)
 

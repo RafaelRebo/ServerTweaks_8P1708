@@ -41,6 +41,11 @@ scoreboard players add @a MagicianRank 0
 scoreboard objectives add KnightsRank dummy
 scoreboard players add @a KnightsRank 0
 
+scoreboard objectives add PuntoH dummy
+scoreboard players add @a PuntoH 0
+scoreboard objectives add PuntoG dummy
+scoreboard players add @a PuntoG 0
+
 #Vampires
 team add VampiresR0 {"text": "[VAMPIROS]","bold":true,"color": "#AA00AA"}
 team modify VampiresR0 color dark_purple
@@ -73,23 +78,23 @@ team modify VampiresR6 prefix {"text": "[VAMPIRO R6] ","bold":true,"color": "#AA
 #Magicians
 team add MagiciansR0 {"text": "[HECHICEROS]","bold":true,"color": "#00AAAA "}
 team modify MagiciansR0 color dark_aqua
-team modify MagiciansR0 prefix {"text": "[HECHICERO NOVATO] ","bold":true,"color": "#00AAAA "}
+team modify MagiciansR0 prefix {"text": "[APRENDIZ] ","bold":true,"color": "#00AAAA "}
 
 team add MagiciansR1 {"text": "[HECHICEROS]","bold":true,"color": "#00AAAA "}
 team modify MagiciansR1 color dark_aqua
-team modify MagiciansR1 prefix {"text": "[HECHICERO R1] ","bold":true,"color": "#00AAAA "}
+team modify MagiciansR1 prefix {"text": "[NOVICIO] ","bold":true,"color": "#00AAAA "}
 
 team add MagiciansR2 {"text": "[HECHICEROS]","bold":true,"color": "#00AAAA "}
 team modify MagiciansR2 color dark_aqua
-team modify MagiciansR2 prefix {"text": "[HECHICERO R2] ","bold":true,"color": "#00AAAA "}
+team modify MagiciansR2 prefix {"text": "[ARCANISTA] ","bold":true,"color": "#00AAAA "}
 
 team add MagiciansR3 {"text": "[HECHICEROS]","bold":true,"color": "#00AAAA "}
 team modify MagiciansR3 color dark_aqua
-team modify MagiciansR3 prefix {"text": "[HECHICERO R3] ","bold":true,"color": "#00AAAA "}
+team modify MagiciansR3 prefix {"text": "[HECHICERO] ","bold":true,"color": "#00AAAA "}
 
 team add MagiciansR4 {"text": "[HECHICEROS]","bold":true,"color": "#00AAAA "}
 team modify MagiciansR4 color dark_aqua
-team modify MagiciansR4 prefix {"text": "[HECHICERO R4] ","bold":true,"color": "#00AAAA "}
+team modify MagiciansR4 prefix {"text": "[ARCHIMAGO] ","bold":true,"color": "#00AAAA "}
 
 team add MagiciansR5 {"text": "[HECHICEROS]","bold":true,"color": "#00AAAA "}
 team modify MagiciansR5 color dark_aqua
@@ -131,4 +136,3 @@ team modify KnightsR6 prefix {"text": "[GUERRERO R6] ","bold":true,"color": "#AA
 #Default team
 team add Default
 execute as @a[tag=!Knight,tag=!Magician,tag=!Vampire] at @a run team join Default @s
-team modify Default color green
