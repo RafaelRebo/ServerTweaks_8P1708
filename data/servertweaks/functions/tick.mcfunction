@@ -1,3 +1,30 @@
+#COMPASS REPLACEMENT
+
+execute as @a if predicate servertweaks:sneaking if entity @s[nbt={SelectedItem:{id:"structurecompass:structure_compass",tag:{"structurecompass:structureName":"dungeons_arise:bandit_towers"}}}] run item replace entity @s weapon.mainhand with minecraft:recovery_compass{bandit:true,display:{Name:'{"text":"Brújula de torres de bandidos inutilizable","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]} 1
+execute as @a if data entity @s SelectedItem.tag.bandit unless predicate servertweaks:sneaking run item replace entity @s weapon.mainhand with structurecompass:structure_compass{"structurecompass:structureName":"dungeons_arise:bandit_towers",display:{Name:'{"text":"Brújula de torres de bandidos","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]}
+execute as @a if predicate servertweaks:sneaking if entity @s[nbt={Inventory:[{id:"structurecompass:structure_compass",tag:{"structurecompass:structureName":"dungeons_arise:bandit_towers"},Slot:-106b}]}] run item replace entity @s weapon.offhand with minecraft:recovery_compass{bandit:true,display:{Name:'{"text":"Brújula de torres de bandidos inutilizable","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]} 1
+execute as @a if entity @s[nbt={Inventory:[{Slot:-106b,tag:{bandit:true}}]}] unless predicate servertweaks:sneaking run item replace entity @s weapon.offhand with structurecompass:structure_compass{"structurecompass:structureName":"dungeons_arise:bandit_towers",display:{Name:'{"text":"Brújula de torres de bandidos","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]}
+
+execute as @a if predicate servertweaks:sneaking if entity @s[nbt={SelectedItem:{id:"structurecompass:structure_compass",tag:{"structurecompass:structureName":"dungeons_arise:foundry"}}}] run item replace entity @s weapon.mainhand with minecraft:recovery_compass{foundry:true,display:{Name:'{"text":"Brújula de fundiciones inutilizable","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]} 1
+execute as @a if data entity @s SelectedItem.tag.foundry unless predicate servertweaks:sneaking run item replace entity @s weapon.mainhand with structurecompass:structure_compass{"structurecompass:structureName":"dungeons_arise:foundry",display:{Name:'{"text":"Brújula de fundiciones","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]}
+execute as @a if predicate servertweaks:sneaking if entity @s[nbt={Inventory:[{id:"structurecompass:structure_compass",tag:{"structurecompass:structureName":"dungeons_arise:foundry"},Slot:-106b}]}] run item replace entity @s weapon.offhand with minecraft:recovery_compass{foundry:true,display:{Name:'{"text":"Brújula de fundiciones inutilizable","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]} 1
+execute as @a if entity @s[nbt={Inventory:[{Slot:-106b,tag:{foundry:true}}]}] unless predicate servertweaks:sneaking run item replace entity @s weapon.offhand with structurecompass:structure_compass{"structurecompass:structureName":"dungeons_arise:foundry",display:{Name:'{"text":"Brújula de fundiciones","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]}
+
+execute as @a if predicate servertweaks:sneaking if entity @s[nbt={SelectedItem:{id:"structurecompass:structure_compass",tag:{"structurecompass:structureName":"dungeons_arise:heavenly_challenger"}}}] run item replace entity @s weapon.mainhand with minecraft:recovery_compass{heavenly_challenger:true,display:{Name:'{"text":"Brújula de naves celestiales inutilizable","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]} 1
+execute as @a if data entity @s SelectedItem.tag.heavenly_challenger unless predicate servertweaks:sneaking run item replace entity @s weapon.mainhand with structurecompass:structure_compass{"structurecompass:structureName":"dungeons_arise:heavenly_challenger",display:{Name:'{"text":"Brújula de naves celestiales","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]}
+execute as @a if predicate servertweaks:sneaking if entity @s[nbt={Inventory:[{id:"structurecompass:structure_compass",tag:{"structurecompass:structureName":"dungeons_arise:heavenly_challenger"},Slot:-106b}]}] run item replace entity @s weapon.offhand with minecraft:recovery_compass{heavenly_challenger:true,display:{Name:'{"text":"Brújula de naves celestiales inutilizable","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]} 1
+execute as @a if entity @s[nbt={Inventory:[{Slot:-106b,tag:{heavenly_challenger:true}}]}] unless predicate servertweaks:sneaking run item replace entity @s weapon.offhand with structurecompass:structure_compass{"structurecompass:structureName":"dungeons_arise:heavenly_challenger",display:{Name:'{"text":"Brújula de naves celestiales","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]}
+
+execute as @a if predicate servertweaks:sneaking if entity @s[nbt={SelectedItem:{id:"structurecompass:structure_compass",tag:{"structurecompass:structureName":"dungeons_arise:infested_temple"}}}] run item replace entity @s weapon.mainhand with minecraft:recovery_compass{infested_temple:true,display:{Name:'{"text":"Brújula de templos infestados inutilizable","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]} 1
+execute as @a if data entity @s SelectedItem.tag.infested_temple unless predicate servertweaks:sneaking run item replace entity @s weapon.mainhand with structurecompass:structure_compass{"structurecompass:structureName":"dungeons_arise:infested_temple",display:{Name:'{"text":"Brújula de templos infestados","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]}
+execute as @a if predicate servertweaks:sneaking if entity @s[nbt={Inventory:[{id:"structurecompass:structure_compass",tag:{"structurecompass:structureName":"dungeons_arise:infested_temple"},Slot:-106b}]}] run item replace entity @s weapon.offhand with minecraft:recovery_compass{infested_temple:true,display:{Name:'{"text":"Brújula de templos infestados inutilizable","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]} 1
+execute as @a if entity @s[nbt={Inventory:[{Slot:-106b,tag:{infested_temple:true}}]}] unless predicate servertweaks:sneaking run item replace entity @s weapon.offhand with structurecompass:structure_compass{"structurecompass:structureName":"dungeons_arise:infested_temple",display:{Name:'{"text":"Brújula de templos infestados","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]}
+
+execute as @a if predicate servertweaks:sneaking if entity @s[nbt={SelectedItem:{id:"structurecompass:structure_compass",tag:{"structurecompass:structureName":"dungeons_arise:keep_kayra"}}}] run item replace entity @s weapon.mainhand with minecraft:recovery_compass{keep_kayra:true,display:{Name:'{"text":"Brújula de Keep Kayra inutilizable","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]} 1
+execute as @a if data entity @s SelectedItem.tag.keep_kayra unless predicate servertweaks:sneaking run item replace entity @s weapon.mainhand with structurecompass:structure_compass{"structurecompass:structureName":"dungeons_arise:keep_kayra",display:{Name:'{"text":"Brújula de Keep Kayra","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]}
+execute as @a if predicate servertweaks:sneaking if entity @s[nbt={Inventory:[{id:"structurecompass:structure_compass",tag:{"structurecompass:structureName":"dungeons_arise:keep_kayra"},Slot:-106b}]}] run item replace entity @s weapon.offhand with minecraft:recovery_compass{keep_kayra:true,display:{Name:'{"text":"Brújula de Keep Kayra inutilizable","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]} 1
+execute as @a if entity @s[nbt={Inventory:[{Slot:-106b,tag:{keep_kayra:true}}]}] unless predicate servertweaks:sneaking run item replace entity @s weapon.offhand with structurecompass:structure_compass{"structurecompass:structureName":"dungeons_arise:keep_kayra",display:{Name:'{"text":"Brújula de Keep Kayra","color":"white"}'},Enchantments:[{id:"mending",lvl:1}]}
+
 #UPGRADED BOOK CRAFTING
 
 execute as @e[type=item,nbt={Item:{id:"irons_spellbooks:netherite_spell_book",Count:1b}}] at @s as @e[type=item,nbt={Item:{id:"supplementaries:antique_ink",Count:1b,tag:{HideFlags:1}}},limit=1,sort=nearest,distance=0..1] at @s if block ~ ~-1 ~ irons_spellbooks:pedestal run data modify block ~ ~-1 ~ heldItem set value {id:"irons_spellbooks:netherite_spell_book",Count:1b,tag:{ISB_Spells:{maxSpells:15,mustEquip:1b,spellWheel:1b}}}
@@ -40,30 +67,15 @@ execute as @e[tag=fresh_craft] run tag @s remove fresh_craft
 
 #FIRE PROJECTILES MECHANIC
 
-execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~-1 ~ air run setblock ~ ~ ~ minecraft:fire
-execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~1 ~ ~ air run setblock ~ ~ ~ minecraft:fire
-execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~-1 ~ ~ air run setblock ~ ~ ~ minecraft:fire
-execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~ ~1 air run setblock ~ ~ ~ minecraft:fire
-execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~ ~-1 air run setblock ~ ~ ~ minecraft:fire
-
-execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~-1 ~ cave_air run setblock ~ ~ ~ minecraft:fire
-execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~1 ~ ~ cave_air run setblock ~ ~ ~ minecraft:fire
-execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~-1 ~ ~ cave_air run setblock ~ ~ ~ minecraft:fire
-execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~ ~1 cave_air run setblock ~ ~ ~ minecraft:fire
-execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~ ~-1 cave_air run setblock ~ ~ ~ minecraft:fire
-
-execute as @e[type=irons_spellbooks:fireball] at @s unless block ~ ~-1 ~ air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace air
-execute as @e[type=irons_spellbooks:fireball] at @s unless block ~1 ~ ~ air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace air
-execute as @e[type=irons_spellbooks:fireball] at @s unless block ~-1 ~ ~ air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace air
-execute as @e[type=irons_spellbooks:fireball] at @s unless block ~ ~ ~1 air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace air
-execute as @e[type=irons_spellbooks:fireball] at @s unless block ~ ~ ~-1 air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace air
-
-execute as @e[type=irons_spellbooks:fireball] at @s unless block ~ ~-1 ~ cave_air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace cave_air
-execute as @e[type=irons_spellbooks:fireball] at @s unless block ~1 ~ ~ cave_air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace cave_air
-execute as @e[type=irons_spellbooks:fireball] at @s unless block ~-1 ~ ~ cave_air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace cave_air
-execute as @e[type=irons_spellbooks:fireball] at @s unless block ~ ~ ~1 cave_air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace cave_air
-execute as @e[type=irons_spellbooks:fireball] at @s unless block ~ ~ ~-1 cave_air run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:fire replace cave_air
-
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~-0.5 ~ air unless block ~ ~-0.5 ~ cave_air run setblock ~ ~ ~ fire
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~1 ~ ~ air unless block ~1 ~ ~ cave_air run setblock ~ ~ ~ fire
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~-1 ~ ~ air unless block ~-1 ~ ~ cave_air run setblock ~ ~ ~ fire
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~ ~1 air unless block ~ ~ ~1 cave_air run setblock ~ ~ ~ fire
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~ ~-1 air unless block ~ ~ ~-1 cave_air run setblock ~ ~ ~ fire
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~1 ~ ~1 air unless block ~1 ~ ~1 cave_air run setblock ~ ~ ~ fire
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~-1 ~ ~1 air unless block ~-1 ~ ~1 cave_air run setblock ~ ~ ~ fire
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~-1 ~ ~-1 air unless block ~-1 ~ ~-1 cave_air run setblock ~ ~ ~ fire
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~1 ~ ~-1 air unless block ~1 ~ ~-1 cave_air run setblock ~ ~ ~ fire
 
 #OVERCHARGED MAGICIAN MECHANIC
 
@@ -200,30 +212,22 @@ tag @a[team=MagiciansR1] add Magician
 tag @a[team=MagiciansR2] add Magician
 tag @a[team=MagiciansR3] add Magician
 tag @a[team=MagiciansR4] add Magician
-tag @a[team=MagiciansR5] add Magician
-tag @a[team=MagiciansR6] add Magician
 tag @a[team=MagiciansR0] remove Vampire
 tag @a[team=MagiciansR1] remove Vampire
 tag @a[team=MagiciansR2] remove Vampire
 tag @a[team=MagiciansR3] remove Vampire
 tag @a[team=MagiciansR4] remove Vampire
-tag @a[team=MagiciansR5] remove Vampire
-tag @a[team=MagiciansR6] remove Vampire
 tag @a[team=MagiciansR0] remove Knight
 tag @a[team=MagiciansR1] remove Knight
 tag @a[team=MagiciansR2] remove Knight
 tag @a[team=MagiciansR3] remove Knight
 tag @a[team=MagiciansR4] remove Knight
-tag @a[team=MagiciansR5] remove Knight
-tag @a[team=MagiciansR6] remove Knight
 
 execute as @a[team=MagiciansR0] run scoreboard players set @s MagicianRank 0
 execute as @a[team=MagiciansR1] run scoreboard players set @s MagicianRank 1 
 execute as @a[team=MagiciansR2] run scoreboard players set @s MagicianRank 2
 execute as @a[team=MagiciansR3] run scoreboard players set @s MagicianRank 3
 execute as @a[team=MagiciansR4] run scoreboard players set @s MagicianRank 4
-execute as @a[team=MagiciansR5] run scoreboard players set @s MagicianRank 5
-execute as @a[team=MagiciansR6] run scoreboard players set @s MagicianRank 6
 
 tag @a[team=KnightsR0] add Knight
 tag @a[team=KnightsR1] add Knight
@@ -263,6 +267,16 @@ execute as @a[team=MagiciansR4] run tag @s add archmage
 execute as @a[tag=archmage] run attribute @s irons_spellbooks:max_mana modifier add 0-0-0-0-2 MaxArchmageMana 50 add
 execute as @a[tag=archmage] run attribute @s irons_spellbooks:cooldown_reduction base set 1.4
 execute as @a[tag=archmage] run tag @s remove archmage
+
+#INVISIBILITY
+
+execute as @a[nbt={ActiveEffects:[{Id:14}]}] run tag @s add invisible
+execute as @a[nbt={ActiveEffects:[{Id:287}]}] run tag @s add invisible
+
+execute as @a[tag=invisible] run attribute @s skilltree:stealth modifier add 0-0-0-0-3 Stealth 10000 add
+execute as @a[tag=invisible] run tag @s remove invisible
+
+execute as @a[nbt=!{ActiveEffects:[{Id:14}]},nbt=!{ActiveEffects:[{Id:287}]}] run attribute @s skilltree:stealth modifier remove 0-0-0-0-3
 
 
 # VAMPIRE SANGUINARE EFFECT FIX (DISABLE fangInfection in Vampirism config file)

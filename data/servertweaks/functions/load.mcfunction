@@ -96,14 +96,6 @@ team add MagiciansR4 {"text": "[HECHICEROS]","bold":true,"color": "#00AAAA "}
 team modify MagiciansR4 color dark_aqua
 team modify MagiciansR4 prefix {"text": "[ARCHIMAGO] ","bold":true,"color": "#00AAAA "}
 
-team add MagiciansR5 {"text": "[HECHICEROS]","bold":true,"color": "#00AAAA "}
-team modify MagiciansR5 color dark_aqua
-team modify MagiciansR5 prefix {"text": "[HECHICERO R5] ","bold":true,"color": "#00AAAA "}
-
-team add MagiciansR6 {"text": "[HECHICEROS]","bold":true,"color": "#00AAAA "}
-team modify MagiciansR6 color dark_aqua
-team modify MagiciansR6 prefix {"text": "[HECHICERO R6] ","bold":true,"color": "#00AAAA "}
-
 #Knights
 team add KnightsR0 {"text": "[GUERREROS]","bold":true,"color": "#AA0000"}
 team modify KnightsR0 color dark_red
