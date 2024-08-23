@@ -111,7 +111,11 @@ team modify KnightsR2 prefix {"text": "[MAESTRO COMBATIENTE] ","bold":true,"colo
 
 team add KnightsR3 {"text": "[GUERREROS]","bold":true,"color": "#AA0000"}
 team modify KnightsR3 color dark_red
-team modify KnightsR3 prefix {"text": "[PALADIN] ","bold":true,"color": "#AA0000"}
+team modify KnightsR3 prefix {"text": "[CABALLERO] ","bold":true,"color": "#AA0000"}
+
+team add KnightsR4 {"text": "[GUERREROS]","bold":true,"color": "#AA0000"}
+team modify KnightsR4 color dark_red
+team modify KnightsR4 prefix {"text": "[PALADIN] ","bold":true,"color": "#AA0000"}
 
 #Default team
 team add Default
