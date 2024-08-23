@@ -99,32 +99,93 @@ team modify MagiciansR4 prefix {"text": "[ARCHIMAGO] ","bold":true,"color": "#00
 #Knights
 team add KnightsR0 {"text": "[GUERREROS]","bold":true,"color": "#AA0000"}
 team modify KnightsR0 color dark_red
-team modify KnightsR0 prefix {"text": "[GUERRERO NOVATO] ","bold":true,"color": "#AA0000"}
+team modify KnightsR0 prefix {"text": "[ESCUDERO] ","bold":true,"color": "#AA0000"}
 
 team add KnightsR1 {"text": "[GUERREROS]","bold":true,"color": "#AA0000"}
 team modify KnightsR1 color dark_red
-team modify KnightsR1 prefix {"text": "[GUERRERO R1] ","bold":true,"color": "#AA0000"}
+team modify KnightsR1 prefix {"text": "[COMBATIENTE] ","bold":true,"color": "#AA0000"}
 
 team add KnightsR2 {"text": "[GUERREROS]","bold":true,"color": "#AA0000"}
 team modify KnightsR2 color dark_red
-team modify KnightsR2 prefix {"text": "[GUERRERO R2] ","bold":true,"color": "#AA0000"}
+team modify KnightsR2 prefix {"text": "[MAESTRO COMBATIENTE] ","bold":true,"color": "#AA0000"}
 
 team add KnightsR3 {"text": "[GUERREROS]","bold":true,"color": "#AA0000"}
 team modify KnightsR3 color dark_red
-team modify KnightsR3 prefix {"text": "[GUERRERO R3] ","bold":true,"color": "#AA0000"}
-
-team add KnightsR4 {"text": "[GUERREROS]","bold":true,"color": "#AA0000"}
-team modify KnightsR4 color dark_red
-team modify KnightsR4 prefix {"text": "[GUERRERO R4] ","bold":true,"color": "#AA0000"}
-
-team add KnightsR5 {"text": "[GUERREROS]","bold":true,"color": "#AA0000"}
-team modify KnightsR5 color dark_red
-team modify KnightsR5 prefix {"text": "[GUERRERO R5] ","bold":true,"color": "#AA0000"}
-
-team add KnightsR6 {"text": "[GUERREROS]","bold":true,"color": "#AA0000"}
-team modify KnightsR6 color dark_red
-team modify KnightsR6 prefix {"text": "[GUERRERO R6] ","bold":true,"color": "#AA0000"}
+team modify KnightsR3 prefix {"text": "[PALADIN] ","bold":true,"color": "#AA0000"}
 
 #Default team
 team add Default
 execute as @a[tag=!Knight,tag=!Magician,tag=!Vampire] at @a run team join Default @s
+
+#GROUP TEAMS
+
+tag @a[team=VampiresR0] add Vampire
+tag @a[team=VampiresR1] add Vampire
+tag @a[team=VampiresR2] add Vampire
+tag @a[team=VampiresR3] add Vampire
+tag @a[team=VampiresR4] add Vampire
+tag @a[team=VampiresR5] add Vampire
+tag @a[team=VampiresR6] add Vampire
+tag @a[team=VampiresR0] remove Knight
+tag @a[team=VampiresR1] remove Knight
+tag @a[team=VampiresR2] remove Knight
+tag @a[team=VampiresR3] remove Knight
+tag @a[team=VampiresR4] remove Knight
+tag @a[team=VampiresR5] remove Knight
+tag @a[team=VampiresR6] remove Knight
+tag @a[team=VampiresR0] remove Magician
+tag @a[team=VampiresR1] remove Magician
+tag @a[team=VampiresR2] remove Magician
+tag @a[team=VampiresR3] remove Magician
+tag @a[team=VampiresR4] remove Magician
+tag @a[team=VampiresR5] remove Magician
+tag @a[team=VampiresR6] remove Magician
+
+execute as @a[team=VampiresR0] run scoreboard players set @s VampireRank 0
+execute as @a[team=VampiresR1] run scoreboard players set @s VampireRank 1 
+execute as @a[team=VampiresR2] run scoreboard players set @s VampireRank 2
+execute as @a[team=VampiresR3] run scoreboard players set @s VampireRank 3
+execute as @a[team=VampiresR4] run scoreboard players set @s VampireRank 4
+execute as @a[team=VampiresR5] run scoreboard players set @s VampireRank 5
+execute as @a[team=VampiresR6] run scoreboard players set @s VampireRank 6
+
+tag @a[team=MagiciansR0] add Magician
+tag @a[team=MagiciansR1] add Magician
+tag @a[team=MagiciansR2] add Magician
+tag @a[team=MagiciansR3] add Magician
+tag @a[team=MagiciansR4] add Magician
+tag @a[team=MagiciansR0] remove Vampire
+tag @a[team=MagiciansR1] remove Vampire
+tag @a[team=MagiciansR2] remove Vampire
+tag @a[team=MagiciansR3] remove Vampire
+tag @a[team=MagiciansR4] remove Vampire
+tag @a[team=MagiciansR0] remove Knight
+tag @a[team=MagiciansR1] remove Knight
+tag @a[team=MagiciansR2] remove Knight
+tag @a[team=MagiciansR3] remove Knight
+tag @a[team=MagiciansR4] remove Knight
+
+execute as @a[team=MagiciansR0] run scoreboard players set @s MagicianRank 0
+execute as @a[team=MagiciansR1] run scoreboard players set @s MagicianRank 1 
+execute as @a[team=MagiciansR2] run scoreboard players set @s MagicianRank 2
+execute as @a[team=MagiciansR3] run scoreboard players set @s MagicianRank 3
+execute as @a[team=MagiciansR4] run scoreboard players set @s MagicianRank 4
+
+tag @a[team=KnightsR0] add Knight
+tag @a[team=KnightsR1] add Knight
+tag @a[team=KnightsR2] add Knight
+tag @a[team=KnightsR3] add Knight
+tag @a[team=KnightsR0] remove Vampire
+tag @a[team=KnightsR1] remove Vampire
+tag @a[team=KnightsR2] remove Vampire
+tag @a[team=KnightsR3] remove Vampire
+tag @a[team=KnightsR0] remove Magician
+tag @a[team=KnightsR1] remove Magician
+tag @a[team=KnightsR2] remove Magician
+tag @a[team=KnightsR3] remove Magician
+
+
+execute as @a[team=KnightsR0] run scoreboard players set @s KnightsRank 0
+execute as @a[team=KnightsR1] run scoreboard players set @s KnightsRank 1 
+execute as @a[team=KnightsR2] run scoreboard players set @s KnightsRank 2
+execute as @a[team=KnightsR3] run scoreboard players set @s KnightsRank 3
