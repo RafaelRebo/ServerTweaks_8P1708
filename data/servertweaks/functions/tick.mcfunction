@@ -53,16 +53,16 @@ execute as @a[tag=Magician] if score @s currentMana < @s maxMana run tag @s remo
 
 execute as @a unless predicate servertweaks:sneaking run scoreboard players set @s sneakTime 0
 execute as @a[tag=!Magician,tag=!Knight,tag=!Vampire] run scoreboard players set @s sneakTime 0
-execute as @a[tag=Magician,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=atMaxMana] run function servertweaks:charged_magic
+execute as @a[tag=Magician,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=atMaxMana,tag=overchargeToggled] run function servertweaks:charged_magic
 
-execute as @a[tag=Magician,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=!atMaxMana] if entity @s[scores={sneakTime=20..}] run title @s actionbar {"text":"Supercarga no disponible sin maná máximo","color":"red"}
+execute as @a[tag=Magician,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=!atMaxMana,tag=overchargeToggled] if entity @s[scores={sneakTime=20..}] run title @s actionbar {"text":"Supercarga no disponible sin maná máximo","color":"red"}
 
 execute as @a[tag=Magician,tag=!overcharged] run scoreboard players set @s chargedTimer 0
 execute as @a[tag=Magician,tag=overcharged] run attribute @s irons_spellbooks:spell_power base set 5
 execute as @a[tag=Magician,tag=overcharged] run attribute @s irons_spellbooks:mana_regen base set -100000
 execute as @a[tag=Magician,tag=overcharged] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0.2 0 0.2 0.1 3 normal @a[distance=..32]
 execute as @a[tag=Magician,tag=overcharged] run scoreboard players add @s chargedTimer 1
-execute as @a[tag=Magician,tag=overcharged,scores={chargedTimer=100..}] run tag @s add inCooldown
+execute as @a[tag=Magician,tag=overcharged,scores={chargedTimer=200..}] run tag @s add inCooldown
 
 execute as @a[tag=Magician,tag=!inCooldown] run scoreboard players set @s cooldownTimer 0
 execute as @a[tag=Magician,tag=inCooldown] run tag @s remove overcharged
@@ -87,9 +87,9 @@ execute as @a[tag=Magician] run function servertweaks:magician_sounds
 execute as @a[tag=Knight] if score @s food matches 20 run tag @s add atMaxHunger
 execute as @a[tag=Knight] if entity @s[scores={food=..19}] run tag @s remove atMaxHunger
 
-execute as @a[tag=Knight,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=atMaxHunger] run function servertweaks:charged_knight
+execute as @a[tag=Knight,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=atMaxHunger,tag=overchargeToggled] run function servertweaks:charged_knight
 
-execute as @a[tag=Knight,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=!atMaxHunger] if entity @s[scores={sneakTime=20..}] run title @s actionbar {"text":"Supercarga no disponible sin barra de hambre completa","color":"red"}
+execute as @a[tag=Knight,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=!atMaxHunger,tag=overchargeToggled] if entity @s[scores={sneakTime=20..}] run title @s actionbar {"text":"Supercarga no disponible sin barra de hambre completa","color":"red"}
 
 execute as @a[tag=Knight,tag=!overcharged] run scoreboard players set @s chargedTimer 0
 execute as @a[tag=Knight,tag=overcharged] run attribute @s minecraft:generic.attack_damage modifier add 0-0-0-0-1 ExtraChargedDamage 1.5 multiply 
@@ -98,7 +98,7 @@ execute as @a[tag=Knight,tag=overcharged] run attribute @s minecraft:generic.mov
 execute as @a[tag=Knight,tag=overcharged] run attribute @s minecraft:generic.attack_speed base set 4.5
 execute as @a[tag=Knight,tag=overcharged] at @s run particle minecraft:end_rod ~ ~ ~ 0.2 0 0.2 0.1 3 normal @a[distance=..32]
 execute as @a[tag=Knight,tag=overcharged] run scoreboard players add @s chargedTimer 1
-execute as @a[tag=Knight,tag=overcharged,scores={chargedTimer=400..}] run tag @s add inCooldown
+execute as @a[tag=Knight,tag=overcharged,scores={chargedTimer=300..}] run tag @s add inCooldown
 
 execute as @a[tag=Knight,tag=!inCooldown] run scoreboard players set @s cooldownTimer 0
 execute as @a[tag=Knight,tag=inCooldown] run tag @s remove overcharged
@@ -119,7 +119,7 @@ execute as @a[tag=Knight] run function servertweaks:knight_sounds
 
 #VAMPIRE TERROR SIGHT
 
-execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged] run function servertweaks:charged_vampire
+execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=overchargeToggled] run function servertweaks:charged_vampire
 
 execute as @a[tag=Vampire,tag=!overcharged] run scoreboard players set @s chargedTimer 0
 execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=overcharged] at @s positioned ~ ~1.5 ~ run function servertweaks:terror_sight
@@ -144,21 +144,21 @@ execute as @a[tag=Vampire] run function servertweaks:vampire_sounds
 
 #TEAM JOIN COMMANDS
 
-execute as @a[tag=Arcanista,scores={PuntoH=0}] run team join MagiciansR2 @s
-execute as @a[tag=Arcanista,scores={PuntoH=1}] run team join MagiciansR3 @s
-execute as @a[tag=Arcanista,scores={PuntoH=2}] run team join MagiciansR4 @s
+execute as @a[tag=Arcanista,scores={PuntoH=0},team=!MagiciansR2] run team join MagiciansR2 @s
+execute as @a[tag=Arcanista,scores={PuntoH=1},team=!MagiciansR3] run team join MagiciansR3 @s
+execute as @a[tag=Arcanista,scores={PuntoH=2},team=!MagiciansR4] run team join MagiciansR4 @s
 execute as @a[team=MagiciansR4] run tag @s add archmage
 execute as @a[tag=archmage] run attribute @s irons_spellbooks:max_mana modifier add 0-0-0-0-2 MaxArchmageMana 50 add
 execute as @a[tag=archmage] run attribute @s irons_spellbooks:cooldown_reduction base set 1.4
 execute as @a[tag=archmage] run tag @s remove archmage
 
-execute as @a[tag=Combatiente,scores={PuntoG=0}] run team join KnightsR2 @s
-execute as @a[tag=Combatiente,scores={PuntoG=1}] run team join KnightsR3 @s
-execute as @a[tag=Combatiente,scores={PuntoG=2}] run team join KnightsR4 @s
+execute as @a[tag=Combatiente,scores={PuntoG=0},team=!KnightsR2] run team join KnightsR2 @s
+execute as @a[tag=Combatiente,scores={PuntoG=1},team=!KnightsR3] run team join KnightsR3 @s
+execute as @a[tag=Combatiente,scores={PuntoG=2},team=!KnightsR4] run team join KnightsR4 @s
 
 execute as @a["vampirism:level"=5,"vampirism:faction"="vampirism:vampire",team=!VampiresR1] run team join VampiresR1 @s
 execute as @a["vampirism:level"=10,"vampirism:faction"="vampirism:vampire",team=!VampiresR2] run team join VampiresR2 @s
-execute as @a["vampirism:level"=14,"vampirism:faction"="vampirism:vampire",team=!VampiresR1] run team join VampiresR3 @s
+execute as @a["vampirism:level"=14,"vampirism:faction"="vampirism:vampire",team=!VampiresR3] run team join VampiresR3 @s
 
 execute as @a[tag=!Magician] run tag @s remove archmage
 execute as @a[tag=!Magician] run tag @s remove Arcanista
