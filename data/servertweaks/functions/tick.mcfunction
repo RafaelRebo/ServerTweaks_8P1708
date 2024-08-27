@@ -34,7 +34,7 @@ execute as @e[tag=fresh_craft] run tag @s remove fresh_craft
 
 #FIRE PROJECTILES MECHANIC
 
-execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~-0.5 ~ air unless block ~ ~-1 ~ cave_air run setblock ~ ~ ~ fire
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~-0.5 ~ air unless block ~ ~-0.5 ~ cave_air run setblock ~ ~ ~ fire
 execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~1 ~ ~ air unless block ~1 ~ ~ cave_air run setblock ~ ~ ~ fire
 execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~-1 ~ ~ air unless block ~-1 ~ ~ cave_air run setblock ~ ~ ~ fire
 execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~ ~1 air unless block ~ ~ ~1 cave_air run setblock ~ ~ ~ fire
@@ -156,9 +156,9 @@ execute as @a[tag=Combatiente,scores={PuntoH=0}] run team join KnightsR2 @s
 execute as @a[tag=Combatiente,scores={PuntoH=1}] run team join KnightsR3 @s
 execute as @a[tag=Combatiente,scores={PuntoG=2}] run team join KnightsR4 @s
 
-execute as @a["vampirism:level"=5,"vampirism:faction"="vampirism:vampire",team=!VampiresR1] run team join VampiresR1 @s
-execute as @a["vampirism:level"=10,"vampirism:faction"="vampirism:vampire",team=!VampiresR2] run team join VampiresR2 @s
-execute as @a["vampirism:level"=14,"vampirism:faction"="vampirism:vampire",team=!VampiresR1] run team join VampiresR3 @s
+#execute as @a["vampirism:level"=5,"vampirism:faction"="vampirism:vampire",team=!VampiresR1] run team join VampiresR1 @s
+#execute as @a["vampirism:level"=10,"vampirism:faction"="vampirism:vampire",team=!VampiresR2] run team join VampiresR2 @s
+#execute as @a["vampirism:level"=14,"vampirism:faction"="vampirism:vampire",team=!VampiresR1] run team join VampiresR3 @s
 
 #INVISIBILITY
 
