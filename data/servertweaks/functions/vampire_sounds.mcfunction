@@ -14,21 +14,21 @@ execute if score @s chargedTimer matches 240 run title @s actionbar {"text":"¡3
 execute if score @s chargedTimer matches 260 run title @s actionbar {"text":"¡2 segundos de supercarga!","color":"aqua"}
 execute if score @s chargedTimer matches 280 run title @s actionbar {"text":"¡1 segundos de supercarga!","color":"aqua"}
 
-execute at @s if score @s chargedTimer matches 1 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute at @s if score @s chargedTimer matches 20 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute at @s if score @s chargedTimer matches 40 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute at @s if score @s chargedTimer matches 60 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute at @s if score @s chargedTimer matches 80 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute at @s if score @s chargedTimer matches 100 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute at @s if score @s chargedTimer matches 120 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute at @s if score @s chargedTimer matches 140 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute at @s if score @s chargedTimer matches 160 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute at @s if score @s chargedTimer matches 180 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute at @s if score @s chargedTimer matches 200 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute at @s if score @s chargedTimer matches 220 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute at @s if score @s chargedTimer matches 240 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute at @s if score @s chargedTimer matches 260 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
-execute at @s if score @s chargedTimer matches 280 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 100 0.5
+execute at @s if score @s chargedTimer matches 1 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 20 0.5
+execute at @s if score @s chargedTimer matches 20 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 20 0.5
+execute at @s if score @s chargedTimer matches 40 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 20 0.5
+execute at @s if score @s chargedTimer matches 60 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 20 0.5
+execute at @s if score @s chargedTimer matches 80 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 20 0.5
+execute at @s if score @s chargedTimer matches 100 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 20 0.5
+execute at @s if score @s chargedTimer matches 120 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 20 0.5
+execute at @s if score @s chargedTimer matches 140 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 20 0.5
+execute at @s if score @s chargedTimer matches 160 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 20 0.5
+execute at @s if score @s chargedTimer matches 180 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 20 0.5
+execute at @s if score @s chargedTimer matches 200 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 20 0.5
+execute at @s if score @s chargedTimer matches 220 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 20 0.5
+execute at @s if score @s chargedTimer matches 240 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 20 0.5
+execute at @s if score @s chargedTimer matches 260 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 20 0.5
+execute at @s if score @s chargedTimer matches 280 run playsound irons_spellbooks:entity.chain_lightning.lightning_chain master @a ~ ~ ~ 20 0.5
 
 execute if score @s cooldownTimer matches 1 run title @s actionbar {"text":"¡20 segundos de enfriamiento!","color":"red"}
 execute if score @s cooldownTimer matches 20 run title @s actionbar {"text":"¡19 segundos de enfriamiento!","color":"red"} 
@@ -51,13 +51,13 @@ execute if score @s cooldownTimer matches 340 run title @s actionbar {"text":"¡
 execute if score @s cooldownTimer matches 360 run title @s actionbar {"text":"¡2 segundos de enfriamiento!","color":"red"}
 execute if score @s cooldownTimer matches 380 run title @s actionbar {"text":"¡1 segundos de enfriamiento!","color":"red"}
 
-execute at @s if score @s cooldownTimer matches 1 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute at @s if score @s cooldownTimer matches 40 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute at @s if score @s cooldownTimer matches 80 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute at @s if score @s cooldownTimer matches 120 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute at @s if score @s cooldownTimer matches 160 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute at @s if score @s cooldownTimer matches 200 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute at @s if score @s cooldownTimer matches 240 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute at @s if score @s cooldownTimer matches 280 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute at @s if score @s cooldownTimer matches 320 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
-execute at @s if score @s cooldownTimer matches 360 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 100 0.5
+execute at @s if score @s cooldownTimer matches 1 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 20 0.5
+execute at @s if score @s cooldownTimer matches 40 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 20 0.5
+execute at @s if score @s cooldownTimer matches 80 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 20 0.5
+execute at @s if score @s cooldownTimer matches 120 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 20 0.5
+execute at @s if score @s cooldownTimer matches 160 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 20 0.5
+execute at @s if score @s cooldownTimer matches 200 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 20 0.5
+execute at @s if score @s cooldownTimer matches 240 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 20 0.5
+execute at @s if score @s cooldownTimer matches 280 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 20 0.5
+execute at @s if score @s cooldownTimer matches 320 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 20 0.5
+execute at @s if score @s cooldownTimer matches 360 run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 20 0.5

@@ -1,0 +1,8 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "type": "minecraft:item",
+      "nbt": "{Item:{id:\"supplementaries:antique_ink\",Count:1b,tag:{HideFlags:1}}}"
+    }
+  }
