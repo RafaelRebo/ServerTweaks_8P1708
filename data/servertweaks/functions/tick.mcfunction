@@ -34,7 +34,7 @@ execute as @e[tag=fresh_craft] run tag @s remove fresh_craft
 
 #FIRE PROJECTILES MECHANIC
 
-execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~-0.5 ~ air unless block ~ ~-0.5 ~ cave_air run setblock ~ ~ ~ fire
+execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~-1 ~ air unless block ~ ~-1 ~ cave_air run setblock ~ ~ ~ fire
 execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~1 ~ ~ air unless block ~1 ~ ~ cave_air run setblock ~ ~ ~ fire
 execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~-1 ~ ~ air unless block ~-1 ~ ~ cave_air run setblock ~ ~ ~ fire
 execute as @e[type=irons_spellbooks:firebolt] at @s unless block ~ ~ ~1 air unless block ~ ~ ~1 cave_air run setblock ~ ~ ~ fire
@@ -156,9 +156,10 @@ execute as @a[tag=Combatiente,scores={PuntoG=0},team=!KnightsR2] run team join K
 execute as @a[tag=Combatiente,scores={PuntoG=1},team=!KnightsR3] run team join KnightsR3 @s
 execute as @a[tag=Combatiente,scores={PuntoG=2},team=!KnightsR4] run team join KnightsR4 @s
 
-execute as @a["vampirism:level"=5,"vampirism:faction"="vampirism:vampire",team=!VampiresR1] run team join VampiresR1 @s
-execute as @a["vampirism:level"=10,"vampirism:faction"="vampirism:vampire",team=!VampiresR2] run team join VampiresR2 @s
-execute as @a["vampirism:level"=14,"vampirism:faction"="vampirism:vampire",team=!VampiresR3] run team join VampiresR3 @s
+execute as @a[tag=Vampire,"vampirism:level"=1,"vampirism:faction"="vampirism:vampire",team=!VampiresR0] run team join VampiresR0 @s
+execute as @a[tag=Vampire,"vampirism:level"=5,"vampirism:faction"="vampirism:vampire",team=!VampiresR1] run team join VampiresR1 @s
+execute as @a[tag=Vampire,"vampirism:level"=10,"vampirism:faction"="vampirism:vampire",team=!VampiresR2] run team join VampiresR2 @s
+execute as @a[tag=Vampire,"vampirism:level"=14,"vampirism:faction"="vampirism:vampire",team=!VampiresR3,team=!VampiresR4] run team join VampiresR3 @s
 
 execute as @a[tag=!Magician] run tag @s remove archmage
 execute as @a[tag=!Magician] run tag @s remove Arcanista
@@ -219,19 +220,23 @@ tag @a[team=VampiresR0] add Vampire
 tag @a[team=VampiresR1] add Vampire
 tag @a[team=VampiresR2] add Vampire
 tag @a[team=VampiresR3] add Vampire
+tag @a[team=VampiresR4] add Vampire
 tag @a[team=VampiresR0] remove Knight
 tag @a[team=VampiresR1] remove Knight
 tag @a[team=VampiresR2] remove Knight
 tag @a[team=VampiresR3] remove Knight
+tag @a[team=VampiresR4] remove Knight
 tag @a[team=VampiresR0] remove Magician
 tag @a[team=VampiresR1] remove Magician
 tag @a[team=VampiresR2] remove Magician
 tag @a[team=VampiresR3] remove Magician
+tag @a[team=VampiresR4] remove Magician
 
 execute as @a[team=VampiresR0] run scoreboard players set @s VampireRank 0
 execute as @a[team=VampiresR1] run scoreboard players set @s VampireRank 1 
 execute as @a[team=VampiresR2] run scoreboard players set @s VampireRank 2
 execute as @a[team=VampiresR3] run scoreboard players set @s VampireRank 3
+execute as @a[team=VampiresR4] run scoreboard players set @s VampireRank 4
 
 tag @a[team=MagiciansR0] add Magician
 tag @a[team=MagiciansR1] add Magician
@@ -259,17 +264,21 @@ tag @a[team=KnightsR0] add Knight
 tag @a[team=KnightsR1] add Knight
 tag @a[team=KnightsR2] add Knight
 tag @a[team=KnightsR3] add Knight
+tag @a[team=KnightsR4] add Knight
 tag @a[team=KnightsR0] remove Vampire
 tag @a[team=KnightsR1] remove Vampire
 tag @a[team=KnightsR2] remove Vampire
 tag @a[team=KnightsR3] remove Vampire
+tag @a[team=KnightsR4] remove Vampire
 tag @a[team=KnightsR0] remove Magician
 tag @a[team=KnightsR1] remove Magician
 tag @a[team=KnightsR2] remove Magician
 tag @a[team=KnightsR3] remove Magician
+tag @a[team=KnightsR4] remove Magician
 
 
 execute as @a[team=KnightsR0] run scoreboard players set @s KnightsRank 0
 execute as @a[team=KnightsR1] run scoreboard players set @s KnightsRank 1 
 execute as @a[team=KnightsR2] run scoreboard players set @s KnightsRank 2
 execute as @a[team=KnightsR3] run scoreboard players set @s KnightsRank 3
+execute as @a[team=KnightsR4] run scoreboard players set @s KnightsRank 4
