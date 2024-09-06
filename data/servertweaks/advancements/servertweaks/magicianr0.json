@@ -3,15 +3,15 @@
     {
         "icon": 
         {
-            "item": "vampirism:vampire_blood_bottle"
+            "item": "irons_spellbooks:copper_spell_book"
         },
         "title": 
         {
-            "text": "Vampiro"
+            "text": "Aprendiz"
         },
         "description": 
         {
-            "text": "Llega al menos a nivel 5 de la clase de Vampiro y conviértete en un vampiro consagrado",
+            "text": "Conviértete en un Aprendiz de Mago y adéntrate en el mundo de la hechicería",
             "color": "green"
         },
         "frame": "task",
@@ -19,16 +19,16 @@
         "announce_to_chat": true,
         "hidden": false
     },
-    "parent": "servertweaks:servertweaks/vampirer1",
+    "parent": "servertweaks:servertweaks/ranks_root",
     "criteria": 
     {
-        "vampirer2":
+        "magicianr0":
         {
             "trigger": "minecraft:impossible"
         }
     },
     "requirements": 
     [
-        ["vampirer2"]
+        ["magicianr0"]
     ]
 }

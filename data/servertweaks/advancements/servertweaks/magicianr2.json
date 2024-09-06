@@ -3,15 +3,15 @@
     {
         "icon": 
         {
-            "item": "vampirism:vampire_blood_bottle"
+            "item": "irons_spellbooks:scroll"
         },
         "title": 
         {
-            "text": "Vampiro"
+            "text": "Arcanista"
         },
         "description": 
         {
-            "text": "Llega al menos a nivel 5 de la clase de Vampiro y conviértete en un vampiro consagrado",
+            "text": "Conviértete en Arcanista aprendiendo el nodo correspondiente en el árbol de habilidades",
             "color": "green"
         },
         "frame": "task",
@@ -19,16 +19,16 @@
         "announce_to_chat": true,
         "hidden": false
     },
-    "parent": "servertweaks:servertweaks/vampirer1",
+    "parent": "servertweaks:servertweaks/magicianr1",
     "criteria": 
     {
-        "vampirer2":
+        "magicianr2":
         {
             "trigger": "minecraft:impossible"
         }
     },
     "requirements": 
     [
-        ["vampirer2"]
+        ["magicianr2"]
     ]
 }

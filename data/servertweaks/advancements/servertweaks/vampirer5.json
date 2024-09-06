@@ -3,32 +3,32 @@
     {
         "icon": 
         {
-            "item": "vampirism:vampire_blood_bottle"
+            "item": "vampiricageing:tainted_concentrate"
         },
         "title": 
         {
-            "text": "Vampiro"
+            "text": "Primer Vampiro"
         },
         "description": 
         {
-            "text": "Llega al menos a nivel 5 de la clase de Vampiro y conviértete en un vampiro consagrado",
-            "color": "green"
+            "text": "Siendo Lord Vampiro, alcanza la máxima edad posible para convertirte en el Primer Vampiro",
+            "color": "dark_purple"
         },
-        "frame": "task",
+        "frame": "challenge",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": false
     },
-    "parent": "servertweaks:servertweaks/vampirer1",
+    "parent": "servertweaks:servertweaks/vampirer4",
     "criteria": 
     {
-        "vampirer2":
+        "vampirer5":
         {
             "trigger": "minecraft:impossible"
         }
     },
     "requirements": 
     [
-        ["vampirer2"]
+        ["vampirer5"]
     ]
 }

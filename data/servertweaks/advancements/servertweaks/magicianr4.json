@@ -3,32 +3,32 @@
     {
         "icon": 
         {
-            "item": "vampirism:vampire_blood_bottle"
+            "item": "irons_spellbooks:eldritch_manuscript"
         },
         "title": 
         {
-            "text": "Vampiro"
+            "text": "Archimago"
         },
         "description": 
         {
-            "text": "Llega al menos a nivel 5 de la clase de Vampiro y conviértete en un vampiro consagrado",
-            "color": "green"
+            "text": "Conviértete en un Archimago aprendiendo ambos nodos de Aristócrata, y el de Arcanista",
+            "color": "dark_purple"
         },
-        "frame": "task",
+        "frame": "challenge",
         "show_toast": true,
         "announce_to_chat": true,
         "hidden": false
     },
-    "parent": "servertweaks:servertweaks/vampirer1",
+    "parent": "servertweaks:servertweaks/magicianr3",
     "criteria": 
     {
-        "vampirer2":
+        "magicianr4":
         {
             "trigger": "minecraft:impossible"
         }
     },
     "requirements": 
     [
-        ["vampirer2"]
+        ["magicianr4"]
     ]
 }

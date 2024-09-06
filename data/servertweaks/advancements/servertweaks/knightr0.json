@@ -3,15 +3,15 @@
     {
         "icon": 
         {
-            "item": "vampirism:vampire_blood_bottle"
+            "item": "simplyswords:iron_longsword"
         },
         "title": 
         {
-            "text": "Vampiro"
+            "text": "Escudero"
         },
         "description": 
         {
-            "text": "Llega al menos a nivel 5 de la clase de Vampiro y conviértete en un vampiro consagrado",
+            "text": "Conviértete en Escudero y iníciate en el arte del combate",
             "color": "green"
         },
         "frame": "task",
@@ -19,16 +19,16 @@
         "announce_to_chat": true,
         "hidden": false
     },
-    "parent": "servertweaks:servertweaks/vampirer1",
+    "parent": "servertweaks:servertweaks/ranks_root",
     "criteria": 
     {
-        "vampirer2":
+        "knightr0":
         {
             "trigger": "minecraft:impossible"
         }
     },
     "requirements": 
     [
-        ["vampirer2"]
+        ["knightr0"]
     ]
 }

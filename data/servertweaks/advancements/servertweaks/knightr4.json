@@ -1,0 +1,34 @@
+{
+    "display": 
+    {
+        "icon": 
+        {
+            "item": "simplyswords:awakened_lichblade"
+        },
+        "title": 
+        {
+            "text": "Paladín"
+        },
+        "description": 
+        {
+            "text": "Conviértete en Paladín aprendiendo el nodo de Combatiente Mejorado y Resiliencia Aumentada del árbol de habilidades",
+            "color": "dark_purple"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "servertweaks:servertweaks/knightr3",
+    "criteria": 
+    {
+        "knightr4":
+        {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": 
+    [
+        ["knightr4"]
+    ]
+}

@@ -202,8 +202,8 @@ execute as @a[tag=!Vampire,tag=!Magician,team=!Default] run execute store result
 
 #FLYING PIGS
 
-tag @e[type=minecraft:pig,nbt={ActiveEffects:[{Id:25}]}] add levit
-execute as @e[tag=levit] run execute at @s run tag @a[distance=..50] add granted
+tag @e[type=minecraft:pig,predicate=servertweaks:haslevit] add levit
+execute as @e[tag=levit] run execute at @s run tag @p add granted
 execute as @e[tag=levit] run effect clear @s majruszsdifficulty:bleeding
 execute as @e[tag=levit] run effect clear @s mahoutsukai:bleeding 
 execute as @a[tag=granted] run execute at @s unless entity @e[tag=levit,distance=..150] run advancement grant @s only servertweaks:servertweaks/flyingpigs flying_pig
@@ -211,8 +211,23 @@ execute as @a[tag=granted] run execute at @s unless entity @e[tag=levit,distance
 
 #VAMPIRE RANK ADVANCEMENTS
 
-execute as @a[team=VampiresR1] run advancement grant @s only servertweaks:servertweaks/vampirer1 vampirer1
-execute as @a[team=VampiresR2] run advancement grant @s only servertweaks:servertweaks/vampirer2 vampirer2
+execute as @a[team=VampiresR0] run advancement grant @s only servertweaks:servertweaks/vampirer1 vampirer1
+execute as @a[team=VampiresR1] run advancement grant @s only servertweaks:servertweaks/vampirer2 vampirer2
+execute as @a[team=VampiresR2] run advancement grant @s only servertweaks:servertweaks/vampirer3 vampirer3
+execute as @a[team=VampiresR3] run advancement grant @s only servertweaks:servertweaks/vampirer4 vampirer4
+execute as @a[team=VampiresR4] run advancement grant @s only servertweaks:servertweaks/vampirer5 vampirer5
+
+execute as @a[team=KnightsR0] run advancement grant @s only servertweaks:servertweaks/knightr0 knightr0
+execute as @a[team=KnightsR1] run advancement grant @s only servertweaks:servertweaks/knightr1 knightr1
+execute as @a[team=KnightsR2] run advancement grant @s only servertweaks:servertweaks/knightr2 knightr2
+execute as @a[team=KnightsR3] run advancement grant @s only servertweaks:servertweaks/knightr3 knightr3
+execute as @a[team=KnightsR4] run advancement grant @s only servertweaks:servertweaks/knightr4 knightr4
+
+execute as @a[team=MagiciansR0] run advancement grant @s only servertweaks:servertweaks/magicianr0 magicianr0
+execute as @a[team=MagiciansR1] run advancement grant @s only servertweaks:servertweaks/magicianr1 magicianr1
+execute as @a[team=MagiciansR2] run advancement grant @s only servertweaks:servertweaks/magicianr2 magicianr2
+execute as @a[team=MagiciansR3] run advancement grant @s only servertweaks:servertweaks/magicianr3 magicianr3
+execute as @a[team=MagiciansR4] run advancement grant @s only servertweaks:servertweaks/magicianr4 magicianr4
 
 #GROUP TEAMS
 
