@@ -1,2 +1,3 @@
-execute if entity @s[tag=overchargeToggled] run tag @s remove overchargeToggled
-execute if entity @s[tag=!overchargeToggled] run tag @s add overchargeToggled
+tag @s add toggling
+execute if entity @s[tag=toggling, tag=overchargeToggled] run function servertweaks:overcharge_deactivate
+execute if entity @s[tag=toggling, tag=!overchargeToggled] run function servertweaks:overcharge_activate
