@@ -114,3 +114,10 @@ team modify KnightsR4 prefix {"text": "[PALADIN] ","bold":true,"color": "#AA0000
 #Default team
 team add Default
 execute as @a[tag=!Knight,tag=!Magician,tag=!Vampire] at @a run team join Default @s
+
+#Overcharge bossbar
+
+bossbar add off [{"text":"Supercarga desactivada","color":"red"}]
+bossbar add on [{"text":"Supercarga activada","color":"green"}]
+bossbar set off color red
+bossbar set on color green

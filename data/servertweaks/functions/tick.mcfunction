@@ -297,3 +297,8 @@ execute as @a[team=KnightsR1] run scoreboard players set @s KnightsRank 1
 execute as @a[team=KnightsR2] run scoreboard players set @s KnightsRank 2
 execute as @a[team=KnightsR3] run scoreboard players set @s KnightsRank 3
 execute as @a[team=KnightsR4] run scoreboard players set @s KnightsRank 4
+
+#Bossbar toggling
+
+bossbar set minecraft:on players @a[tag=overchargeUnlocked, tag=overchargeToggled]
+bossbar set minecraft:off players @a[tag=overchargeUnlocked, tag=!overchargeToggled]
