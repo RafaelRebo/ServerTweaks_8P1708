@@ -65,13 +65,6 @@
     "unusualend:undead_enderling",
     "unusualend:dragling",
     "quark:forgotten",
-    "quark:wraith",
-    "cataclysm:ignited_berserker",
-    "cataclysm:ignited_revenant",
-    "cataclysm:koboleton",
-    "cataclysm:kobolediator",
-    "cataclysm:wadjet",
-    "cataclysm:ancient_remnant",
-    "cataclysm:modern_remnant"
+    "quark:wraith"
     ]
 }
