@@ -84,7 +84,7 @@
         "conditions": [
           {
             "condition": "minecraft:random_chance",
-            "chance": 0.5
+            "chance": 0.6
           }
         ]
       },
@@ -99,7 +99,7 @@
         "conditions": [
           {
             "condition": "minecraft:random_chance",
-            "chance": 0.5
+            "chance": 0.6
           },
           {
             "condition": "minecraft:entity_properties",
@@ -107,7 +107,7 @@
             "predicate": {
               "equipment": {
                 "mainhand": {
-                  "items": "occultism:butcher_knife"
+                  "items": ["occultism:butcher_knife"]
                 }
               }
             }
