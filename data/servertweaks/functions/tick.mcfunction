@@ -302,3 +302,8 @@ execute as @a[team=KnightsR4] run scoreboard players set @s KnightsRank 4
 
 bossbar set minecraft:on players @a[tag=overchargeUnlocked, tag=overchargeToggled]
 bossbar set minecraft:off players @a[tag=overchargeUnlocked, tag=!overchargeToggled]
+
+#Fall damage negate
+
+execute as @a[predicate=servertweaks:hasborrowedauthority] at @s store result score @s falldistance run data get entity @s FallDistance
+execute as @a[predicate=servertweaks:hasborrowedauthority] at @s if entity @s[scores={falldistance=4..}] unless block ~ ~-4 ~ air run effect give @s minecraft:slow_falling 2 0 true

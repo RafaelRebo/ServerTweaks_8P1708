@@ -48,6 +48,9 @@ scoreboard players add @a PuntoH 0
 scoreboard objectives add PuntoG dummy
 scoreboard players add @a PuntoG 0
 
+scoreboard objectives add falldistance dummy
+scoreboard players add @a falldistance 0
+
 #Vampires
 team add VampiresR0 {"text": "[VAMPIROS]","bold":true,"color": "#AA00AA"}
 team modify VampiresR0 color dark_purple
