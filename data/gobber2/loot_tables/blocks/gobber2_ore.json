@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "gobber2_ore",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "gobber2:gobber2_globette",
+          "functions": [
+            {
+              "function": "minecraft:apply_bonus",
+              "enchantment": "minecraft:fortune",
+              "formula": "ore_drops"
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        },
+        {
+          "condition": "minecraft:match_tool",
+          "predicate": {
+            "items": [
+              "minecraft:netherite_pickaxe",
+              "gobber2:gobber2_pickaxe",
+              "gobber2:gobber2_pickaxe_nether",
+              "gobber2:gobber2_pickaxe_end",
+              "gobber2:gobber2_paxel",
+              "gobber2:gobber2_paxel_nether",
+              "gobber2:gobber2_paxel_end",
+              "gobber2:gobber2_paxel_stars",
+              "majruszsdifficulty:enderium_pickaxe",
+              "create_sa:portable_drill",
+              "gobber2:gobber2_hammer",
+              "gobber2:gobber2_hammer_nether",
+              "gobber2:gobber2_hammer_end",
+              "cp_tweaks:desh_pickaxe",
+              "cp_tweaks:calorite_pickaxe",
+              "deeperdarker:warden_pickaxe"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+

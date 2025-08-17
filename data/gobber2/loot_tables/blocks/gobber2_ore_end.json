@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "gobber2_ore_end",
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "gobber2:gobber2_globette_end",
+          "functions": [
+            {
+              "function": "minecraft:apply_bonus",
+              "enchantment": "minecraft:fortune",
+              "formula": "ore_drops"
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        },
+        {
+          "condition": "minecraft:match_tool",
+          "predicate": {
+            "items": [
+              "gobber2:gobber2_pickaxe_nether",
+              "gobber2:gobber2_pickaxe_end",
+              "gobber2:gobber2_paxel_end",
+              "gobber2:gobber2_paxel_stars",
+              "majruszsdifficulty:enderium_pickaxe",
+              "gobber2:gobber2_hammer_nether",
+              "gobber2:gobber2_hammer_end"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+
