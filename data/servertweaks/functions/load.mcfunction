@@ -32,12 +32,8 @@ tag El_Tito_Samu add Admin
 tag Octopusi1708 add Admin
 tag @a add Player
 
-function #minecraft:schedule_ageing
-
 #TEAMS COMMANDS
 
-scoreboard objectives add VampireRank dummy
-scoreboard players add @a VampireRank 0
 scoreboard objectives add MagicianRank dummy
 scoreboard players add @a MagicianRank 0
 scoreboard objectives add KnightsRank dummy
@@ -50,27 +46,6 @@ scoreboard players add @a PuntoG 0
 
 scoreboard objectives add falldistance dummy
 scoreboard players add @a falldistance 0
-
-#Vampires
-team add VampiresR0 {"text": "[VAMPIROS]","bold":true,"color": "#AA00AA"}
-team modify VampiresR0 color dark_purple
-team modify VampiresR0 prefix {"text": "[DHAPHYR] ","bold":true,"color": "#AA00AA"}
-
-team add VampiresR1 {"text": "[VAMPIROS]","bold":true,"color": "#AA00AA"}
-team modify VampiresR1 color dark_purple
-team modify VampiresR1 prefix {"text": "[VAMPIRO] ","bold":true,"color": "#AA00AA"}
-
-team add VampiresR2 {"text": "[VAMPIROS]","bold":true,"color": "#AA00AA"}
-team modify VampiresR2 color dark_purple
-team modify VampiresR2 prefix {"text": "[VAMPIRO ANCIANO] ","bold":true,"color": "#AA00AA"}
-
-team add VampiresR3 {"text": "[VAMPIROS]","bold":true,"color": "#AA00AA"}
-team modify VampiresR3 color dark_purple
-team modify VampiresR3 prefix {"text": "[LORD VAMPIRO] ","bold":true,"color": "#AA00AA"}
-
-team add VampiresR4 {"text": "[VAMPIROS]","bold":true,"color": "#AA00AA"}
-team modify VampiresR4 color dark_purple
-team modify VampiresR4 prefix {"text": "[PRIMER VAMPIRO] ","bold":true,"color": "#AA00AA"}
 
 #Magicians
 team add MagiciansR0 {"text": "[HECHICEROS]","bold":true,"color": "#00AAAA "}
