@@ -1,0 +1,39 @@
+{
+  "criteria": {
+    "matar_acechador_con_guadana": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "born_in_chaos_v1:nightmare_stalker"
+        },
+        "killing_blow": {
+          "source_entity": {
+            "equipment": {
+              "mainhand": {
+                "items": ["born_in_chaos_v1:nightmare_scythe"]
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "parent": "servertweaks:servertweaks/stalker_slayer",
+  "display": {
+    "title": "De tu propia medicina",
+    "description": {
+      "text": "Derrota al acechador usando una Guadaña de Pesadillas",
+      "color": "dark_purple"
+    },
+    "icon": {
+      "item": "born_in_chaos_v1:nightmare_scythe"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    ["matar_acechador_con_guadana"]
+  ]
+}

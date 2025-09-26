@@ -1,0 +1,34 @@
+{
+    "display": 
+    {
+        "icon": 
+        {
+            "item": "create_things_and_misc:vibration_mechanism"
+        },
+        "title": 
+        {
+            "text": "Sandeces"
+        },
+        "description": 
+        {
+            "text": "Condecoraciones por llevar a cabo los siguientes sinsentidos",
+            "color": "green"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "servertweaks:servertweaks/root",
+    "criteria": 
+    {
+        "nothing":
+        {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "requirements": 
+    [
+        ["nothing"]
+    ]
+}

@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "golpe_obliterador": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "dealt": {
+            "min": 200.01
+          }
+        }
+      }
+    }
+  },
+  "parent": "servertweaks:servertweaks/tough_hit",
+  "display": {
+    "title": "Un golpe obliterador",
+    "description": {
+        "text": "Inflinge más de 200 puntos de daño en un solo golpe",
+        "color": "dark_purple"
+    }, 
+    "icon": {
+      "item": "minecraft:netherite_sword"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    ["golpe_obliterador"]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "golpe_brutal": {
+      "trigger": "minecraft:player_hurt_entity",
+      "conditions": {
+        "damage": {
+          "dealt": {
+            "min": 100.01
+          }
+        }
+      }
+    }
+  },
+  "parent": "servertweaks:servertweaks/killing_root",
+  "display": {
+    "title": "Un golpe duro",
+    "description": {
+        "text": "Inflinge más de 100 puntos de daño en un solo golpe",
+        "color": "green"
+    }, 
+    "icon": {
+      "item": "minecraft:iron_sword"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    ["golpe_brutal"]
+  ]
+}

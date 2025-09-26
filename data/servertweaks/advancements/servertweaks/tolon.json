@@ -1,0 +1,47 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+         "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "stats": [
+                  { 
+                    "type": "minecraft:custom", 
+                    "stat": "minecraft:bell_ring", 
+                    "value": { 
+                      "min": 1000
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "servertweaks:servertweaks/tilin",
+  "display": {
+    "title": "El terror de los vecinos",
+    "description": {
+      "text": "Tocaste una campana 1000 veces",
+      "color": "dark_purple"
+    },
+    "icon": {
+      "item": "minecraft:bell"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    ["requirement"]
+  ]
+}

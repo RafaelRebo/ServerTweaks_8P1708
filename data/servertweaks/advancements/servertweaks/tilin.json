@@ -1,0 +1,47 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+         "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type_specific": {
+                "type": "player",
+                "stats": [
+                  { 
+                    "type": "minecraft:custom", 
+                    "stat": "minecraft:bell_ring", 
+                    "value": { 
+                      "min": 100
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "servertweaks:servertweaks/random_root",
+  "display": {
+    "title": "Tilín Tolón",
+    "description": {
+      "text": "Tocaste una campana 100 veces",
+      "color": "green"
+    },
+    "icon": {
+      "item": "minecraft:bell"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    ["requirement"]
+  ]
+}

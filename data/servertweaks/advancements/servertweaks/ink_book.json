@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "nunca_ocurre": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "servertweaks:servertweaks/magician_root",
+  "display": {
+    "title": "El Poder del Calamar Primigenio",
+    "description": {
+      "text": "Has mejorado un libro de hechizos con tinta de calamar primigenio",
+      "color": "dark_purple"
+    },
+    "icon": {
+      "item": "supplementaries:antique_ink"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    ["nunca_ocurre"]
+  ]
+}

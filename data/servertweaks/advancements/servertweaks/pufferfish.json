@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "comer_pez_globo": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:pufferfish"]
+        }
+      }
+    }
+  },
+  "parent": "servertweaks:servertweaks/random_root",
+  "display": {
+    "title": "Catador selecto",
+    "description": {
+      "text": "No importa lo que digan, cómete un pez globo",
+      "color": "green"
+    },
+    "icon": {
+      "item": "minecraft:pufferfish"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    ["comer_pez_globo"]
+  ]
+}

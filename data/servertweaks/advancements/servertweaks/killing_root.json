@@ -1,0 +1,34 @@
+{
+    "display": 
+    {
+        "icon": 
+        {
+            "item": "minecraft:iron_axe"
+        },
+        "title": 
+        {
+            "text": "Muerte y destrucción"
+        },
+        "description": 
+        {
+            "text": "Condecoraciones por pegarle a entidades que no lo merecen (o sí)",
+            "color": "green"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "servertweaks:servertweaks/root",
+    "criteria": 
+    {
+        "nothing":
+        {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "requirements": 
+    [
+        ["nothing"]
+    ]
+}

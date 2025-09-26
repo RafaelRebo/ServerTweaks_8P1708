@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "matar_acechador": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "born_in_chaos_v1:nightmare_stalker"
+        }
+      }
+    }
+  },
+  "parent": "servertweaks:servertweaks/killing_root",
+  "display": {
+    "title": "Asesino de las pesadillas",
+    "description": {
+      "text": "Has derrotado a un acechador de pesadillas",
+      "color": "green"
+    },
+    "icon": {
+      "item": "born_in_chaos_v1:nightmare_stalker_skull"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "requirements": [
+    ["matar_acechador"]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+    "display": 
+    {
+        "icon": 
+        {
+            "item": "irons_spellbooks:furled_map"
+        },
+        "title": 
+        {
+            "text": "Zarandajas de magos"
+        },
+        "description": 
+        {
+            "text": "Condecoraciones del mundo máaaagico",
+            "color": "green"
+        },
+        "frame": "task",
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "parent": "servertweaks:servertweaks/root",
+    "criteria": 
+    {
+        "nothing":
+        {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "requirements": 
+    [
+        ["nothing"]
+    ]
+}

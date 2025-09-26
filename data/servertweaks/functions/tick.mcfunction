@@ -21,6 +21,7 @@ execute as @e[type=item,predicate=servertweaks:diamond_spellbook] at @s as @e[ty
 execute as @e[tag=fresh_craft] at @s run playsound minecraft:entity.lightning_bolt.impact master @a ~ ~ ~ 20 1.3
 execute as @e[tag=fresh_craft] at @s run playsound minecraft:block.enchantment_table.use master @a ~ ~ ~ 20 0.8
 execute as @e[tag=fresh_craft] at @s run particle minecraft:enchant ~ ~1.4 ~ 0.2 0 0.2 2 500 normal @a[distance=..32]
+execute as @e[tag=fresh_craft] at @s run advancement grant @p only servertweaks:servertweaks/ink_book nunca_ocurre
 execute as @e[tag=fresh_craft] at @s run kill @e[type=item,predicate=servertweaks:netherite_spellbook,sort=nearest,limit=1]
 execute as @e[tag=fresh_craft] at @s run kill @e[type=item,predicate=servertweaks:necronomicon,sort=nearest,limit=1]
 execute as @e[tag=fresh_craft] at @s run kill @e[type=item,predicate=servertweaks:evoker_spellbook,sort=nearest,limit=1]
@@ -224,3 +225,4 @@ bossbar set minecraft:off players @a[tag=overchargeUnlocked, tag=!overchargeTogg
 
 execute as @a[predicate=servertweaks:hasborrowedauthority] at @s store result score @s falldistance run data get entity @s FallDistance
 execute as @a[predicate=servertweaks:hasborrowedauthority] at @s if entity @s[scores={falldistance=4..}] unless block ~ ~-4 ~ air run effect give @s minecraft:slow_falling 2 0 true
+
