@@ -11,6 +11,8 @@ scoreboard objectives add chargedTimer dummy
 scoreboard objectives add currentMana dummy
 scoreboard objectives add maxMana dummy
 scoreboard objectives add food food
+scoreboard objectives add ka dummy
+scoreboard objectives add mc dummy
 gamerule playersSleepingPercentage 1
 
 execute as @a[tag=Magician] run attribute @s irons_spellbooks:spell_resist base set 1.3

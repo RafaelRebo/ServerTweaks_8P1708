@@ -59,24 +59,28 @@ execute as @a[tag=Magician,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharg
 execute as @a[tag=Magician,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=!atMaxMana,tag=overchargeToggled] if entity @s[scores={sneakTime=20..}] run title @s actionbar {"text":"Supercarga no disponible sin maná máximo","color":"red"}
 
 execute as @a[tag=Magician,tag=!overcharged] run scoreboard players set @s chargedTimer 0
-execute as @a[tag=Magician,tag=overcharged] run attribute @s irons_spellbooks:spell_power base set 5
-execute as @a[tag=Magician,tag=overcharged] run attribute @s irons_spellbooks:mana_regen base set -100000
+execute as @a[tag=Magician,tag=overcharged] run attribute @s irons_spellbooks:spell_power base set 7
+execute as @a[tag=Magician,tag=overcharged] run attribute @s irons_spellbooks:mana_regen base set 100000
 execute as @a[tag=Magician,tag=overcharged] at @s run particle minecraft:soul_fire_flame ~ ~ ~ 0.2 0 0.2 0.1 3 normal @a[distance=..32]
 execute as @a[tag=Magician,tag=overcharged] run scoreboard players add @s chargedTimer 1
-execute as @a[tag=Magician,tag=overcharged,scores={chargedTimer=200..}] run tag @s add inCooldown
+execute as @a[tag=Magician,tag=overcharged,scores={chargedTimer=300..}] run tag @s add inCooldown
 
 execute as @a[tag=Magician,tag=!inCooldown] run scoreboard players set @s cooldownTimer 0
 execute as @a[tag=Magician,tag=inCooldown] run tag @s remove overcharged
 execute as @a[tag=Magician,tag=inCooldown] run attribute @s irons_spellbooks:max_mana base set -100000
+execute as @a[tag=Magician,tag=inCooldown] run attribute @s minecraft:generic.max_health modifier add 0-0-0-0-9 LowHealth -0.75 multiply_base
+execute as @a[tag=Magician,tag=inCooldown,scores={cooldownTimer=2}] run effect give @s minecraft:instant_damage 1 0 true
 execute as @a[tag=Magician,tag=inCooldown] run attribute @s irons_spellbooks:spell_power base set 1
 execute as @a[tag=Magician,tag=inCooldown] run attribute @s minecraft:generic.movement_speed base set 0.05
 execute as @a[tag=Magician,tag=inCooldown] run effect give @s weakness 1 100 true
 execute as @a[tag=Magician,tag=inCooldown] run scoreboard players add @s cooldownTimer 1
 execute as @a[tag=Magician,tag=inCooldown] at @s run particle minecraft:large_smoke ~ ~ ~ 0.1 0 0.1 0.05 3 normal @a[distance=..32]
 execute as @a[tag=Magician,tag=inCooldown] if score @s cooldownTimer matches 199 run tag @s add resetmana
-execute as @a[tag=Magician,tag=inCooldown,scores={cooldownTimer=200..}] run tag @s remove inCooldown
+execute as @a[tag=Magician,tag=inCooldown,scores={cooldownTimer=500..}] run tag @s remove inCooldown
 
 execute as @a[tag=Magician,tag=!inCooldown,tag=resetmana] run attribute @s irons_spellbooks:max_mana base set 100
+execute as @a[tag=Magician,tag=!inCooldown,tag=resetmana] run attribute @s minecraft:generic.max_health modifier remove 0-0-0-0-9
+execute as @a[tag=Magician,tag=!inCooldown,tag=resetmana] run effect give @s minecraft:instant_health 1 0 true
 execute as @a[tag=Magician,tag=!inCooldown,tag=resetmana] run attribute @s irons_spellbooks:mana_regen base set 1
 execute as @a[tag=Magician,tag=!inCooldown,tag=resetmana] run attribute @s minecraft:generic.movement_speed base set 0.1
 execute as @a[tag=Magician,tag=!inCooldown,tag=resetmana] run tag @s remove resetmana
