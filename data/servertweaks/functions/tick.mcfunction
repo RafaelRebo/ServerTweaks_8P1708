@@ -122,6 +122,31 @@ execute as @a[tag=Knight,tag=!inCooldown,tag=resetmana] run tag @s remove resetm
 
 execute as @a[tag=Knight] run function servertweaks:knight_sounds
 
+#VAMPIRE TERROR SIGHT
+
+execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=overchargeToggled] run function servertweaks:charged_vampire
+
+execute as @a[tag=Vampire,tag=!overcharged] run scoreboard players set @s chargedTimer 0
+execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=overcharged] at @s positioned ~ ~1.5 ~ run function servertweaks:terror_sight
+execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=overcharged] at @s anchored eyes positioned ^ ^ ^.5 run function servertweaks:particle_line
+execute as @a[tag=Vampire,tag=overcharged] at @s run particle minecraft:dust 0.67 0 0 1 ~ ~ ~ 0.3 0 0.3 0.1 10 normal @a[distance=..32]
+execute as @a[tag=Vampire,tag=overcharged] run scoreboard players add @s chargedTimer 1
+execute as @a[tag=Vampire,tag=overcharged,scores={chargedTimer=300..}] run tag @s add inCooldown
+
+execute as @a[tag=Vampire,tag=!inCooldown] run scoreboard players set @s cooldownTimer 0
+execute as @a[tag=Vampire,tag=inCooldown] run tag @s remove overcharged
+execute as @a[tag=Vampire,tag=inCooldown] run scoreboard players add @s cooldownTimer 1
+execute as @a[tag=Vampire,tag=inCooldown] at @s run particle minecraft:large_smoke ~ ~ ~ 0.1 0 0.1 0.05 3 normal @a[distance=..32]
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 2 run effect give @s slowness 20 2 true
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 2 run effect give @s weakness 20 100 true
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 2 run effect give @s hunger 20 20 true
+execute as @a[tag=Vampire,tag=inCooldown] if score @s cooldownTimer matches 2 run tag @s add resetmana
+execute as @a[tag=Vampire,tag=inCooldown,scores={cooldownTimer=400..}] run tag @s remove inCooldown
+
+execute as @a[tag=Knight,tag=!inCooldown,tag=resetmana] run tag @s remove resetmana
+
+execute as @a[tag=Vampire] run function servertweaks:vampire_sounds
+
 #TEAM JOIN COMMANDS
 
 execute as @a[tag=Arcanista,scores={PuntoH=0},team=!MagiciansR2] run team join MagiciansR2 @s
@@ -135,6 +160,11 @@ execute as @a[tag=archmage] run tag @s remove archmage
 execute as @a[tag=Combatiente,scores={PuntoG=0},team=!KnightsR2] run team join KnightsR2 @s
 execute as @a[tag=Combatiente,scores={PuntoG=1},team=!KnightsR3] run team join KnightsR3 @s
 execute as @a[tag=Combatiente,scores={PuntoG=2},team=!KnightsR4] run team join KnightsR4 @s
+
+execute as @a[tag=Vampire,"vampirism:level"=1,"vampirism:faction"="vampirism:vampire",team=!VampiresR0] run team join VampiresR0 @s
+execute as @a[tag=Vampire,"vampirism:level"=5,"vampirism:faction"="vampirism:vampire",team=!VampiresR1] run team join VampiresR1 @s
+execute as @a[tag=Vampire,"vampirism:level"=10,"vampirism:faction"="vampirism:vampire",team=!VampiresR2] run team join VampiresR2 @s
+execute as @a[tag=Vampire,"vampirism:level"=14,"vampirism:faction"="vampirism:vampire",team=!VampiresR3,team=!VampiresR4] run team join VampiresR3 @s
 
 execute as @a[tag=!Magician] run tag @s remove archmage
 execute as @a[tag=!Magician] run tag @s remove Arcanista
@@ -161,6 +191,10 @@ execute as @a[scores={BannedItems=1..}] run effect give @s minecraft:weakness 2 
 execute as @a[scores={BannedItems=0}] run tag @s add forbiddenClear
 execute as @a[scores={BannedItems=1..},tag=forbiddenClear] run function servertweaks:has_banned
 
+#Vampires
+
+execute as @a[tag=!Knight,tag=!Magician,team=!Default] run execute store result score @s BannedItems run clear @s #servertweaks:servertweaks.vampirebanned 0
+
 #Magicians
 
 execute as @a[tag=!Knight,tag=!Vampire,team=!Default] run execute store result score @s BannedItems run clear @s #servertweaks:servertweaks.magicianbanned 0
@@ -185,11 +219,38 @@ execute as @a[team=MagiciansR4] run advancement grant @s only servertweaks:serve
 
 #GROUP TEAMS
 
+tag @a[team=VampiresR0] add Vampire
+tag @a[team=VampiresR1] add Vampire
+tag @a[team=VampiresR2] add Vampire
+tag @a[team=VampiresR3] add Vampire
+tag @a[team=VampiresR4] add Vampire
+tag @a[team=VampiresR0] remove Knight
+tag @a[team=VampiresR1] remove Knight
+tag @a[team=VampiresR2] remove Knight
+tag @a[team=VampiresR3] remove Knight
+tag @a[team=VampiresR4] remove Knight
+tag @a[team=VampiresR0] remove Magician
+tag @a[team=VampiresR1] remove Magician
+tag @a[team=VampiresR2] remove Magician
+tag @a[team=VampiresR3] remove Magician
+tag @a[team=VampiresR4] remove Magician
+
+execute as @a[team=VampiresR0] run scoreboard players set @s VampireRank 0
+execute as @a[team=VampiresR1] run scoreboard players set @s VampireRank 1 
+execute as @a[team=VampiresR2] run scoreboard players set @s VampireRank 2
+execute as @a[team=VampiresR3] run scoreboard players set @s VampireRank 3
+execute as @a[team=VampiresR4] run scoreboard players set @s VampireRank 4
+
 tag @a[team=MagiciansR0] add Magician
 tag @a[team=MagiciansR1] add Magician
 tag @a[team=MagiciansR2] add Magician
 tag @a[team=MagiciansR3] add Magician
 tag @a[team=MagiciansR4] add Magician
+tag @a[team=MagiciansR0] remove Vampire
+tag @a[team=MagiciansR1] remove Vampire
+tag @a[team=MagiciansR2] remove Vampire
+tag @a[team=MagiciansR3] remove Vampire
+tag @a[team=MagiciansR4] remove Vampire
 tag @a[team=MagiciansR0] remove Knight
 tag @a[team=MagiciansR1] remove Knight
 tag @a[team=MagiciansR2] remove Knight
@@ -207,6 +268,11 @@ tag @a[team=KnightsR1] add Knight
 tag @a[team=KnightsR2] add Knight
 tag @a[team=KnightsR3] add Knight
 tag @a[team=KnightsR4] add Knight
+tag @a[team=KnightsR0] remove Vampire
+tag @a[team=KnightsR1] remove Vampire
+tag @a[team=KnightsR2] remove Vampire
+tag @a[team=KnightsR3] remove Vampire
+tag @a[team=KnightsR4] remove Vampire
 tag @a[team=KnightsR0] remove Magician
 tag @a[team=KnightsR1] remove Magician
 tag @a[team=KnightsR2] remove Magician

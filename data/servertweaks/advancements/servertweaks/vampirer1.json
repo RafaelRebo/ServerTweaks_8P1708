@@ -1,0 +1,34 @@
+{
+    "display": 
+    {
+        "icon": 
+        {
+            "item": "vampirism:vampire_fang"
+        },
+        "title": 
+        {
+            "text": "Dhaphyr"
+        },
+        "description": 
+        {
+            "text": "Conviértete en un Dhaphyr llegando al nivel 1 de la clase de Vampiro",
+            "color": "green"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "parent": "servertweaks:servertweaks/ranks_root",
+    "criteria": 
+    {
+        "vampirer1":
+        {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "requirements": 
+    [
+        ["vampirer1"]
+    ]
+}
