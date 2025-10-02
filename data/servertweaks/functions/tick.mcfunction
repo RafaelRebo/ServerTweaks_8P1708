@@ -217,6 +217,13 @@ execute as @a[team=MagiciansR2] run advancement grant @s only servertweaks:serve
 execute as @a[team=MagiciansR3] run advancement grant @s only servertweaks:servertweaks/magicianr3 magicianr3
 execute as @a[team=MagiciansR4] run advancement grant @s only servertweaks:servertweaks/magicianr4 magicianr4
 
+execute as @a[team=VampiresR0] run advancement grant @s only servertweaks:servertweaks/vampirer1 vampirer1
+execute as @a[team=VampiresR1] run advancement grant @s only servertweaks:servertweaks/vampirer2 vampirer2
+execute as @a[team=VampiresR2] run advancement grant @s only servertweaks:servertweaks/vampirer3 vampirer3
+execute as @a[team=VampiresR3] run advancement grant @s only servertweaks:servertweaks/vampirer4 vampirer4
+execute as @a[team=VampiresR4] run advancement grant @s only servertweaks:servertweaks/vampirer5 vampirer5
+
+execute as @a[tag=overchargeUnlocked] run advancement grant @s only servertweaks:servertweaks/overcharge overcharge
 #GROUP TEAMS
 
 tag @a[team=VampiresR0] add Vampire
