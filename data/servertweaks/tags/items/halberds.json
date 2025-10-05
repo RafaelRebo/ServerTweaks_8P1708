@@ -1,0 +1,12 @@
+{
+    "values": [
+        "simplyswords:iron_halberd",
+        "simplyswords:gold_halberd",
+        "simplyswords:diamond_halberd",
+        "simplyswords:netherite_halberd",
+        "simplyswords:runic_halberd",
+        "simplyswords:gobber_compat/gobber/gobber_halberd",
+        "simplyswords:gobber_compat/gobber_nether/gobber_nether_halberd",
+        "simplyswords:gobber_compat/gobber_end/gobber_end_halberd"
+    ]
+}

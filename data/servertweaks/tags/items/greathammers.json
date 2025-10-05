@@ -7,10 +7,6 @@
         "simplyswords:runic_greathammer",
         "simplyswords:gobber_compat/gobber/gobber_greathammer",
         "simplyswords:gobber_compat/gobber_nether/gobber_nether_greathammer",
-        "simplyswords:gobber_compat/gobber_end/gobber_end_greathammer",
-        "simplyswords:hearthflame",
-        "simplyswords:soulkeeper",
-        "simplyswords:frostfall",
-        "simplyswords:mjolnir"
+        "simplyswords:gobber_compat/gobber_end/gobber_end_greathammer"
     ]
 }

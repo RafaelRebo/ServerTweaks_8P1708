@@ -1,0 +1,12 @@
+{
+    "values": [
+        "simplyswords:iron_greataxe",
+        "simplyswords:gold_greataxe",
+        "simplyswords:diamond_greataxe",
+        "simplyswords:netherite_greataxe",
+        "simplyswords:runic_greataxe",
+        "simplyswords:gobber_compat/gobber/gobber_greataxe",
+        "simplyswords:gobber_compat/gobber_nether/gobber_nether_greataxe",
+        "simplyswords:gobber_compat/gobber_end/gobber_end_greataxe"
+    ]
+}
