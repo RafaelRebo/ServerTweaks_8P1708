@@ -19,7 +19,7 @@
         "announce_to_chat": true,
         "hidden": false
     },
-    "parent": "servertweaks:servertweaks/vampirer4",
+    "parent": "servertweaks:servertweaks/vampire_age_one",
     "criteria": 
     {
         "vampirer5":

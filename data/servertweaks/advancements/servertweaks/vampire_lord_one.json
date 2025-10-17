@@ -1,0 +1,34 @@
+{
+  "parent": "servertweaks:servertweaks/vampirer4",
+  "criteria": {
+    "level": {
+      "conditions": {
+        "type": "LORD",
+        "faction": "vampirism:vampire",
+        "level": 1
+      },
+      "trigger": "vampirism:faction"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+        "text": "Llega al primer nivel de Lord Vampiro",
+        "color": "green"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "vampirism:vampire_minion_binding"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "Barón Vampiro"
+    }
+  },
+  "requirements": [
+    [
+      "level"
+    ]
+  ]
+}
