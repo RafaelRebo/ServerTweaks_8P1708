@@ -303,3 +303,10 @@ bossbar set minecraft:off players @a[tag=overchargeUnlocked, tag=!overchargeTogg
 execute as @a[predicate=servertweaks:hasborrowedauthority] at @s store result score @s falldistance run data get entity @s FallDistance
 execute as @a[predicate=servertweaks:hasborrowedauthority] at @s if entity @s[scores={falldistance=4..}] unless block ~ ~-4 ~ air run effect give @s minecraft:slow_falling 2 0 true
 
+#Goat advancement
+
+tag @a remove looking_at_goat
+execute as @a[advancements={servertweaks:servertweaks/chupacabra=false}] at @s run execute if entity @e[type=minecraft:goat,distance=..5,limit=1,sort=nearest] positioned ^ ^ ^1 if entity @e[type=minecraft:goat,distance=..1] run tag @s add looking_at_goat
+
+advancement grant @a[tag=looking_at_goat,advancements={servertweaks:servertweaks/chupacabra=false}] only servertweaks:servertweaks/chupacabra looking_at_goat
+advancement revoke @a[tag=!looking_at_goat,advancements={servertweaks:servertweaks/chupacabra=false}] only servertweaks:servertweaks/chupacabra looking_at_goat

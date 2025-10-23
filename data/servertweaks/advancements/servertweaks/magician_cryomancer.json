@@ -1,0 +1,22 @@
+{
+  "parent": "servertweaks:servertweaks/magician_archevoker",
+  "criteria": {
+    "kill_apothecarist": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "irons_spellbooks:cryomancer"
+        }
+      }
+    }
+  },
+  "display": {
+    "title": { "text": "La torre del páramo helado" },
+    "description": { "text": "Derrota al criomante", "color": "green" },
+    "icon": { "item": "irons_spellbooks:cryomancer_helmet" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

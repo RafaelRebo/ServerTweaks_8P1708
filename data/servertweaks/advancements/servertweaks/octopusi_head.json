@@ -1,0 +1,28 @@
+{
+  "parent": "servertweaks:servertweaks/samu_head",
+  "criteria": {
+    "has_head": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:player_head"],
+            "nbt": "{SkullOwner:\"Octopusi1708\"}"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": { "text": "Calamar de gala" },
+    "description": { "text": "Has conseguido la cabeza de Octopusi1708, esperemos que no te pegue la inteligencia de los calamares de Minecraft" },
+    "icon": {
+      "item": "minecraft:player_head",
+      "nbt": "{SkullOwner:\"Octopusi1708\"}"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

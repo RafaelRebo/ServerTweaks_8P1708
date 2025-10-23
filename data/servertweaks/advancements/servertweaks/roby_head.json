@@ -1,0 +1,28 @@
+{
+  "parent": "servertweaks:servertweaks/luci_head",
+  "criteria": {
+    "has_head": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:player_head"],
+            "nbt": "{SkullOwner:\"RobyRobusto_YT\"}"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": { "text": "Hasta los cascos RGB macho" },
+    "description": { "text": "Has conseguido la cabeza de Roby. Ahora tú también puedes brillar como él" },
+    "icon": {
+      "item": "minecraft:player_head",
+      "nbt": "{SkullOwner:\"RobyRobusto_YT\"}"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

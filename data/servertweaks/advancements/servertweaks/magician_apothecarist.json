@@ -1,0 +1,22 @@
+{
+  "parent": "servertweaks:servertweaks/magician_root",
+  "criteria": {
+    "kill_apothecarist": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "irons_spellbooks:apothecarist"
+        }
+      }
+    }
+  },
+  "display": {
+    "title": { "text": "Un cerdo en un barrizal" },
+    "description": { "text": "Derrota a un apothecarist", "color": "green" },
+    "icon": { "item": "irons_spellbooks:plagued_helmet" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

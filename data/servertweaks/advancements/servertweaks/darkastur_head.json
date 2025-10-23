@@ -1,0 +1,28 @@
+{
+  "parent": "servertweaks:servertweaks/vlayib_head",
+  "criteria": {
+    "has_head": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:player_head"],
+            "nbt": "{SkullOwner:\"DarkAstur\"}"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": { "text": "Chuchurrumín asturiano" },
+    "description": { "text": "Has conseguido la cabeza de DarkAstur, aunque no parece tener DosCaras" },
+    "icon": {
+      "item": "minecraft:player_head",
+      "nbt": "{SkullOwner:\"DarkAstur\"}"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

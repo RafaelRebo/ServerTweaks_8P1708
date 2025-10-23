@@ -1,0 +1,28 @@
+{
+  "parent": "servertweaks:servertweaks/octopusi_head",
+  "criteria": {
+    "has_head": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:player_head"],
+            "nbt": "{SkullOwner:\"Vlayib\"}"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": { "text": "Panda DJ" },
+    "description": { "text": "HAs conseguido la cabeza de Vlayib. ¿Sientes el ritmo de la música en sus sesos?" },
+    "icon": {
+      "item": "minecraft:player_head",
+      "nbt": "{SkullOwner:\"Vlayib\"}"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

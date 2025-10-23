@@ -1,0 +1,22 @@
+{
+  "parent": "servertweaks:servertweaks/magician_cryomancer",
+  "criteria": {
+    "kill_apothecarist": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "irons_spellbooks:priest"
+        }
+      }
+    }
+  },
+  "display": {
+    "title": { "text": "Sacrilegio en la aldea" },
+    "description": { "text": "Derrota al sacedote", "color": "green" },
+    "icon": { "item": "irons_spellbooks:priest_helmet" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

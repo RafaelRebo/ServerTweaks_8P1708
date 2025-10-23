@@ -1,0 +1,68 @@
+{
+  "parent": "servertweaks:servertweaks/magician_pyromancer",
+  "criteria": {
+    "kill_archevoker": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "irons_spellbooks:archevoker"
+        }
+      }
+    },
+    "kill_apothecarist": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "irons_spellbooks:apothecarist"
+        }
+      }
+    },
+    "kill_cryomancer": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "irons_spellbooks:cryomancer"
+        }
+      }
+    },
+    "kill_pyromancer": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "irons_spellbooks:pyromancer"
+        }
+      }
+    },
+    "kill_priest": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "irons_spellbooks:priest"
+        }
+      }
+    }
+  },
+  "requirements": [
+    ["kill_apothecarist"],
+    ["kill_archevoker"],
+    ["kill_cryomancer"],
+    ["kill_pyromancer"],
+    ["kill_priest"]
+  ],
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Has matado a los maestros de cada escuela de magia",
+      "color": "dark_purple"
+    },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "irons_spellbooks:spellbreaker"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "El más listo de la clase"
+    }
+  }
+}

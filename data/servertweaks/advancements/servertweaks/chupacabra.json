@@ -1,0 +1,32 @@
+{
+  "parent": "servertweaks:servertweaks/vampire_root",
+  "criteria": {
+    "suck_blood": {
+      "trigger": "vampirism:vampire_action",
+      "conditions": {
+        "action": "SUCK_BLOOD"
+      }
+    },
+    "looking_at_goat": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["suck_blood"], ["looking_at_goat"]
+  ],
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Chupaste de una cabra (y sin pajita :O)"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:goat_horn"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Chupacabras"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "parent": "servertweaks:servertweaks/magician_priest",
+  "criteria": {
+    "kill_apothecarist": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "irons_spellbooks:pyromancer"
+        }
+      }
+    }
+  },
+  "display": {
+    "title": { "text": "Ruinas cinéreas" },
+    "description": { "text": "Derrota al piromante", "color": "green" },
+    "icon": { "item": "irons_spellbooks:pyromancer_helmet" },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "parent": "servertweaks:servertweaks/darkastur_head",
+  "criteria": {
+    "has_head": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:player_head"],
+            "nbt": "{SkullOwner:\"LUCI_FER_121\"}"
+          }
+        ]
+      }
+    }
+  },
+  "display": {
+    "title": { "text": "Guerrera impávida" },
+    "description": { "text": "Has conseguido la cabeza de Lu. A ver si así se te pega algo de su destreza en el combate" },
+    "icon": {
+      "item": "minecraft:player_head",
+      "nbt": "{SkullOwner:\"LUCI_FER_121\"}"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  }
+}
