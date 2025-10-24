@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "relics:arrow_quiver",
+    "supplementaries:quiver",
+    "spartanweaponry:small_arrow_quiver",
+    "spartanweaponry:medium_arrow_quiver",
+    "spartanweaponry:large_arrow_quiver",
+    "spartanweaponry:huge_arrow_quiver",
+    "spartanweaponry:small_bolt_quiver",
+    "spartanweaponry:medium_bolt_quiver",
+    "spartanweaponry:large_bolt_quiver",
+    "spartanweaponry:huge_bolt_quiver"
+  ]
+}
