@@ -7,7 +7,7 @@
         "items": [
           {
             "items": ["minecraft:player_head"],
-            "nbt": "{SkullOwner:\"DarkAstur\"}"
+            "nbt": "{SkullOwner:{Id:[I;1430370187,-1734259410,-1274441191,216731435],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTc2MTQ4MjcyMjg2MCwKICAicHJvZmlsZUlkIiA6ICI1NTQxYjc4Yjk4YTE0ZDJlYjQwOTkyMTkwY2ViMGYyYiIsCiAgInByb2ZpbGVOYW1lIiA6ICJEYXJrQXN0dXIiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzI4ZmQyM2QxOTMzOGZlYmNjZDBmYTgyYmZkMmNjYzU0MTE5ODExMTEwNTcyMGIxZmI5NGQ3MzA2ZjFjYjZlNiIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9\"}]},Name:\"DarkAstur\"}}"
           }
         ]
       }

@@ -7,7 +7,7 @@
         "items": [
           {
             "items": ["minecraft:player_head"],
-            "nbt": "{SkullOwner:\"El_Tito_Samu\"}"
+            "nbt": "{SkullOwner:{Id:[I;1672247639,-1969205647,-2023293896,-741502323],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTc2MTQ4MjcyMjg2NiwKICAicHJvZmlsZUlkIiA6ICI2M2FjNzk1NzhhYTA0ZTcxODc2NmZjMzhkM2NkOTI4ZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJFbF9UaXRvX1NhbXUiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmRhZmU4ZTc5MjkyYmQyZGRiYzY2YmRmZWUyOTlkZDBkNTJjNzExMjllYmE3ODAxOTc3NGUyM2Q3NzU2MjMwOCIKICAgIH0KICB9Cn0=\",Signature:\"eIglKBpvZhVgo+FrFJa5nxkO2ZzzTtYQxMqw5dBvWPw+gPTV9mLNbAOqF07H+JcpzMb/2q5RksXCBdmYFVd3we9nj3rhA81nl0LgxYevZiom8ugGkM9r8lqbOojXJ+jUJ19xghORJsB3eanH3G8Lc7tpzgRujgS0i0AXCFSJKssxBNvEBopenUjYtcSdjme8NXhX51SydCjEdSIgYtTpu1gNjd2YNCE9C7uaKp0O2RwoCyM0Gy+t9Xf6HXCGO2reuZ9vhevMV3hSAOpQQl2hEbQfhKcMIalRpf12zHk9xr4q2r83mvaZsdhAC15dskfAe6Pr8M7meQ9vLjbZfB+K8EcYB8Sqzvz6HCUVZffJpX7eQE1lWigFowaopDD2nIGvFiXdPXS+kBsmiITbq4etKc96stDMfj54GvMLACHhYHP4DmZr0jOEnTrafRQanpZwxYDRPni9cpOLrbwS/lOP6K7x5AuQk3tKII22vG21gVKuhzUarlAeoLwuKvLyMPLDoKibNXXCoU0ZnKP9SqU3sPvF/gmrX6+NO55nKCbOQn2MvUjwXuSNiWMOIwN/9bklwwdxRFoavnaWeAlz4Y2WAWlVvvTlslkbPFCW4F4NsIuZTJvoHCcUR5gWEuG4pc39a0CN+9yIO0RlDoIetmUZQj6hEmbf1LfiyEaIZMg7xc8=\"}]},Name:\"El_Tito_Samu\"}}"
           }
         ]
       }

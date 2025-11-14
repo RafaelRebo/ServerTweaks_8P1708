@@ -175,7 +175,7 @@ execute as @a[tag=!Knight] run tag @s remove Combatiente
 execute as @a if predicate servertweaks:hasinvis run tag @s add invisible
 execute as @a if predicate servertweaks:hastrueinvis run tag @s add invisible
 
-execute as @a[tag=invisible] run attribute @s skilltree:stealth modifier add 0-0-0-0-3 Stealth 10000 add
+execute as @a[tag=invisible] run attribute @s skilltree:stealth modifier add 0-0-0-0-3 Stealth 99999999 add
 execute as @a[tag=invisible] run tag @s remove invisible
 
 execute as @a unless predicate servertweaks:hasinvis unless predicate servertweaks:hastrueinvis run attribute @s skilltree:stealth modifier remove 0-0-0-0-3
@@ -310,3 +310,5 @@ execute as @a[advancements={servertweaks:servertweaks/chupacabra=false}] at @s r
 
 advancement grant @a[tag=looking_at_goat,advancements={servertweaks:servertweaks/chupacabra=false}] only servertweaks:servertweaks/chupacabra looking_at_goat
 advancement revoke @a[tag=!looking_at_goat,advancements={servertweaks:servertweaks/chupacabra=false}] only servertweaks:servertweaks/chupacabra looking_at_goat
+
+effect give @a[tag=Escudo,nbt={Inventory:[{Slot:-106b,id:"minecraft:shield"}]}] minecraft:resistance 1 1 true

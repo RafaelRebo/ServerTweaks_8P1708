@@ -15,7 +15,7 @@
   },
   "display": {
     "title": { "text": "Panda DJ" },
-    "description": { "text": "HAs conseguido la cabeza de Vlayib. ¿Sientes el ritmo de la música en sus sesos?" },
+    "description": { "text": "Has conseguido la cabeza de Vlayib. ¿Sientes el ritmo de la música en sus sesos?" },
     "icon": {
       "item": "minecraft:player_head",
       "nbt": "{SkullOwner:\"Vlayib\"}"

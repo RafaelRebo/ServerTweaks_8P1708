@@ -7,7 +7,7 @@
         "items": [
           {
             "items": ["minecraft:player_head"],
-            "nbt": "{SkullOwner:\"Octopusi1708\"}"
+            "nbt": "{SkullOwner:{Id:[I;747326207,1881423972,-1254098967,1985309146],Properties:{textures:[{Value:\"ewogICJ0aW1lc3RhbXAiIDogMTc2MTQ3ODU4MTE1MSwKICAicHJvZmlsZUlkIiA6ICIyYzhiNGFmZjcwMjQ0MDY0YjUzZmY3ZTk3NjU1NjlkYSIsCiAgInByb2ZpbGVOYW1lIiA6ICJPY3RvcHVzaTE3MDgiLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzU0ZWUzMWVlOGQzNjI3NWJmOTA1NTkyNjIwZDhhYTUwY2RlYWY0MjQ2ZmRmNGNkYTU2NjFiNDYyZmFlYjhmNSIKICAgIH0sCiAgICAiQ0FQRSIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTY5YjdmMmExZDAwZDI2ZjMwZWZlM2Y5YWI5YWM4MTdiMWU2ZDM1ZjRmM2NmYjAzMjRlZjJkMzI4MjIzZDM1MCIKICAgIH0KICB9Cn0=\"}]},Name:\"Octopusi1708\"}}"
           }
         ]
       }
