@@ -312,3 +312,18 @@ advancement grant @a[tag=looking_at_goat,advancements={servertweaks:servertweaks
 advancement revoke @a[tag=!looking_at_goat,advancements={servertweaks:servertweaks/chupacabra=false}] only servertweaks:servertweaks/chupacabra looking_at_goat
 
 effect give @a[tag=Escudo,nbt={Inventory:[{Slot:-106b,id:"minecraft:shield"}]}] minecraft:resistance 1 1 true
+
+execute as @a[tag=Magician] run attribute @s irons_spellbooks:spell_resist base set 1.3
+execute as @a[tag=Magician] run attribute @s irons_spellbooks:mana_regen base set 1.3
+execute as @a[tag=Knight] run attribute @s minecraft:generic.armor base set 6
+execute as @a[tag=Knight] run attribute @s skilltree:regeneration base set 0.25
+execute as @a[tag=Knight] run attribute @s irons_spellbooks:spell_resist base set 0.5
+
+execute as @a[tag=!Magician] run attribute @s irons_spellbooks:spell_resist base set 1
+execute as @a[tag=!Magician] run attribute @s irons_spellbooks:mana_regen base set 1
+execute as @a[tag=!Knight] run attribute @s minecraft:generic.armor base set 0
+execute as @a[tag=!Knight] run attribute @s skilltree:regeneration base set 0
+execute as @a[tag=!Knight] run attribute @s irons_spellbooks:spell_resist base set 1
+
+execute as @a[scores={ka=2..}] run advancement grant @s only servertweaks:servertweaks/is_it_possible 2points
+execute as @a[scores={mc=2..}] run advancement grant @s only servertweaks:servertweaks/is_it_possible 2points
