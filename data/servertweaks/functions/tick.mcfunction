@@ -54,9 +54,9 @@ execute as @a[tag=Magician] if score @s currentMana < @s maxMana run tag @s remo
 
 execute as @a unless predicate servertweaks:sneaking run scoreboard players set @s sneakTime 0
 execute as @a[tag=!Magician,tag=!Knight,tag=!Vampire] run scoreboard players set @s sneakTime 0
-execute as @a[tag=Magician,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=atMaxMana,tag=overchargeToggled] run function servertweaks:charged_magic
+execute as @a[tag=Magician,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=atMaxMana,tag=overchargeToggled,scores={BannedItems=0}] run function servertweaks:charged_magic
 
-execute as @a[tag=Magician,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=!atMaxMana,tag=overchargeToggled] if entity @s[scores={sneakTime=20..}] run title @s actionbar {"text":"Supercarga no disponible sin maná máximo","color":"red"}
+execute as @a[tag=Magician,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=!atMaxMana,tag=overchargeToggled,scores={BannedItems=0}] if entity @s[scores={sneakTime=20..}] run title @s actionbar {"text":"Supercarga no disponible sin maná máximo","color":"red"}
 
 execute as @a[tag=Magician,tag=!overcharged] run scoreboard players set @s chargedTimer 0
 execute as @a[tag=Magician,tag=overcharged] run attribute @s irons_spellbooks:spell_power base set 7
@@ -92,9 +92,9 @@ execute as @a[tag=Magician] run function servertweaks:magician_sounds
 execute as @a[tag=Knight] if score @s food matches 20 run tag @s add atMaxHunger
 execute as @a[tag=Knight] if entity @s[scores={food=..19}] run tag @s remove atMaxHunger
 
-execute as @a[tag=Knight,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=atMaxHunger,tag=overchargeToggled] run function servertweaks:charged_knight
+execute as @a[tag=Knight,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=atMaxHunger,tag=overchargeToggled,scores={BannedItems=0}] run function servertweaks:charged_knight
 
-execute as @a[tag=Knight,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=!atMaxHunger,tag=overchargeToggled] if entity @s[scores={sneakTime=20..}] run title @s actionbar {"text":"Supercarga no disponible sin barra de hambre completa","color":"red"}
+execute as @a[tag=Knight,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=!atMaxHunger,tag=overchargeToggled,scores={BannedItems=0}] if entity @s[scores={sneakTime=20..}] run title @s actionbar {"text":"Supercarga no disponible sin barra de hambre completa","color":"red"}
 
 execute as @a[tag=Knight,tag=!overcharged] run scoreboard players set @s chargedTimer 0
 execute as @a[tag=Knight,tag=overcharged] run attribute @s minecraft:generic.attack_damage modifier add 0-0-0-0-1 ExtraChargedDamage 1.5 multiply 
@@ -124,7 +124,7 @@ execute as @a[tag=Knight] run function servertweaks:knight_sounds
 
 #VAMPIRE TERROR SIGHT
 
-execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=overchargeToggled] run function servertweaks:charged_vampire
+execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=!inCooldown,tag=!overcharged,tag=overchargeToggled,scores={BannedItems=0}] run function servertweaks:charged_vampire
 
 execute as @a[tag=Vampire,tag=!overcharged] run scoreboard players set @s chargedTimer 0
 execute as @a[tag=Vampire,tag=overchargeUnlocked,tag=overcharged] at @s positioned ~ ~1.5 ~ run function servertweaks:terror_sight
@@ -165,6 +165,7 @@ execute as @a[tag=Vampire,"vampirism:level"=1,"vampirism:faction"="vampirism:vam
 execute as @a[tag=Vampire,"vampirism:level"=5,"vampirism:faction"="vampirism:vampire",team=!VampiresR1] run team join VampiresR1 @s
 execute as @a[tag=Vampire,"vampirism:level"=10,"vampirism:faction"="vampirism:vampire",team=!VampiresR2] run team join VampiresR2 @s
 execute as @a[tag=Vampire,"vampirism:level"=14,"vampirism:faction"="vampirism:vampire",team=!VampiresR3,team=!VampiresR4] run team join VampiresR3 @s
+execute as @a[tag=Vampire] if entity @s[advancements={vampirism:vampire/max_lord=true}] run tag @s add overchargeUnlocked
 
 execute as @a[tag=!Magician] run tag @s remove archmage
 execute as @a[tag=!Magician] run tag @s remove Arcanista
@@ -189,7 +190,9 @@ execute as @a[tag=Alquimista] run effect give @s water_breathing 2 0 true
 execute as @a[scores={BannedItems=1..}] run effect give @s minecraft:weakness 2 100 true
 
 execute as @a[scores={BannedItems=0}] run tag @s add forbiddenClear
-execute as @a[scores={BannedItems=1..},tag=forbiddenClear] run function servertweaks:has_banned
+execute as @a[scores={BannedItems=1..}] run tag @s add forbiddenTitle
+execute as @a[scores={BannedItems=0}] run tag @s remove forbiddenTitle
+execute as @a[scores={BannedItems=1..,sneakTime=..1},tag=forbiddenTitle,tag=!overcharged,tag=!inCooldown,tag=overchargeToggled] run function servertweaks:has_banned
 
 #Vampires
 
