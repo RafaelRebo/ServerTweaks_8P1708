@@ -176,10 +176,10 @@ execute as @a[tag=!Knight] run tag @s remove Combatiente
 execute as @a if predicate servertweaks:hasinvis run tag @s add invisible
 execute as @a if predicate servertweaks:hastrueinvis run tag @s add invisible
 
-execute as @a[tag=invisible] run attribute @s skilltree:stealth modifier add 0-0-0-0-3 Stealth 99999999 add
+#execute as @a[tag=invisible] run attribute @s skilltree:stealth modifier add 0-0-0-0-3 Stealth 99999999 add
 execute as @a[tag=invisible] run tag @s remove invisible
 
-execute as @a unless predicate servertweaks:hasinvis unless predicate servertweaks:hastrueinvis run attribute @s skilltree:stealth modifier remove 0-0-0-0-3
+#execute as @a unless predicate servertweaks:hasinvis unless predicate servertweaks:hastrueinvis run attribute @s skilltree:stealth modifier remove 0-0-0-0-3
 
 #ALQUIMISTA
 
@@ -319,13 +319,13 @@ effect give @a[tag=Escudo,nbt={Inventory:[{Slot:-106b,id:"minecraft:shield"}]}] 
 execute as @a[tag=Magician] run attribute @s irons_spellbooks:spell_resist base set 1.3
 execute as @a[tag=Magician] run attribute @s irons_spellbooks:mana_regen base set 1.3
 execute as @a[tag=Knight] run attribute @s minecraft:generic.armor base set 6
-execute as @a[tag=Knight] run attribute @s skilltree:regeneration base set 0.25
+#execute as @a[tag=Knight] run attribute @s skilltree:regeneration base set 0.25
 execute as @a[tag=Knight] run attribute @s irons_spellbooks:spell_resist base set 0.5
 
 execute as @a[tag=!Magician] run attribute @s irons_spellbooks:spell_resist base set 1
 execute as @a[tag=!Magician] run attribute @s irons_spellbooks:mana_regen base set 1
 execute as @a[tag=!Knight] run attribute @s minecraft:generic.armor base set 0
-execute as @a[tag=!Knight] run attribute @s skilltree:regeneration base set 0
+#execute as @a[tag=!Knight] run attribute @s skilltree:regeneration base set 0
 execute as @a[tag=!Knight] run attribute @s irons_spellbooks:spell_resist base set 1
 
 execute as @a[scores={ka=2..}] run advancement grant @s only servertweaks:servertweaks/is_it_possible 2points
