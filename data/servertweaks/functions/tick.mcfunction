@@ -330,3 +330,14 @@ execute as @a[tag=!Knight] run attribute @s irons_spellbooks:spell_resist base s
 
 execute as @a[scores={ka=2..}] run advancement grant @s only servertweaks:servertweaks/is_it_possible 2points
 execute as @a[scores={mc=2..}] run advancement grant @s only servertweaks:servertweaks/is_it_possible 2points
+
+#New scoreboards 1.20.1
+
+execute as @a[tag=Magician] if entity @s[scores={overchargePoints=2..}] run tag @s add overchargeUnlocked
+#execute as @a[tag=Knight] if entity @s[scores={overchargePoints=2..}] run tag @s add overchargeUnlocked
+
+execute as @a[tag=Magician] if entity @s[scores={inkPoints=3..}] run give @s supplementaries:antique_ink{display:{Name:'["",{"text":"Tinta de calamar primigenio","italic":false}]',Lore:['["",{"text":"Permite aumentar la capacidad de un libro de hechizos a 15 (USAR CON UN LIBRO SIN HECHIZOS)","italic":false}]']},Enchantments:[{lvl:1,id:mending}],HideFlags:1} 3
+
+execute as @a[scores={teamMagicianMediumPoints=2..},team=!MagiciansR2,team=!MagiciansR3,team=!MagiciansR4] run team join MagiciansR2 @s
+execute as @a[scores={teamMagicianFinalPoints=2..},team=!MagiciansR3,team=!MagiciansR4] run team join MagiciansR3 @s
+execute as @a[scores={teamMagicianFinalPoints=3..},team=!MagiciansR4] run team join MagiciansR4 @s

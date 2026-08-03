@@ -11,8 +11,12 @@ scoreboard objectives add chargedTimer dummy
 scoreboard objectives add currentMana dummy
 scoreboard objectives add maxMana dummy
 scoreboard objectives add food food
-scoreboard objectives add ka dummy
-scoreboard objectives add mc dummy
+scoreboard objectives add teamMagicianMediumPoints dummy
+scoreboard objectives add teamMagicianFinalPoints dummy
+scoreboard objectives add teamKnightMediumPoints dummy
+scoreboard objectives add teamKnightFinalPoints dummy
+scoreboard objectives add overchargePoints dummy
+scoreboard objectives add inkPoints dummy
 gamerule playersSleepingPercentage 1
 
 team add nocollision
