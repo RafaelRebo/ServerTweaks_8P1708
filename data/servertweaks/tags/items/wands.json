@@ -5,6 +5,7 @@
         "irons_spellbooks:lightning_rod",
         "irons_spellbooks:ice_staff",
         "irons_spellbooks:blood_staff",
-        "irons_spellbooks:pyrium_staff"
+        "irons_spellbooks:pyrium_staff",
+        "wind_spellbooks:wind_staff"
     ]
 }
